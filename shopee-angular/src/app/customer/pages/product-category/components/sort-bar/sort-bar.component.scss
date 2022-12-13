@@ -1,0 +1,55 @@
+@use 'src/assets/style/variables/fontSize' as fs;
+@use 'src/assets/style/variables/color' as color;
+
+.sort-bar {
+  border-radius: 2px;
+  background-color: color.$color-21;
+
+  button {
+    height: 34px;
+    background-color: color.$color-14;
+    border-radius: 2px;
+
+    &.active {
+      background-color: color.$color-2;
+      color: color.$color-14;
+    }
+  }
+}
+
+.select-box {
+  margin-left: 12px;
+  height: 34px;
+  width: 200px;
+  line-height: 34px;
+
+  .result-box {
+    border-radius: 2px;
+
+    svg {
+      width: 12px;
+      height: 14px;
+    }
+  }
+}
+
+.navigation {
+  button {
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 1px solid color.$color-20;
+    }
+
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    svg {
+      width: 10px;
+      height: 10px;
+      fill: color.$color-28;
+    }
+  }
+}

@@ -1,0 +1,154 @@
+.widget-content {
+  position: relative;
+  padding: 1.125rem 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  min-height: 600px;
+  z-index: 0;
+  font-size: 15px;
+}
+
+.page-user--header{
+  min-height: 65px;
+  line-height: 1.625rem;
+
+  p{
+    margin-bottom: 0;
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #333;
+  }
+
+  span{
+    font-size: 0.875rem;
+  }
+}
+
+.widget-text-form {
+
+    button{
+      padding: .5em 1.625em;
+      color: #fff;
+      background-color: #ee4d2d;
+
+      border-radius: .25rem;
+      border: 1px solid #ee4d2d;
+      transition: all .5s ease;
+
+      &:hover{
+          color: #ee4d2d;
+          background-color: transparent;
+      }
+    }
+}
+
+.label-input {
+  margin-right: 1.5rem;
+  text-align: right;
+  text-transform: capitalize;
+}
+
+.constant-value {
+  color: #333;
+
+    a{
+        margin-left: .5rem;
+        color: #05a;
+        text-decoration: underline;
+    }
+}
+
+.input-text {
+  input{
+    padding: 0.375rem 1rem;
+    width: 100%;
+    border: 1px solid gray;
+}
+}
+
+.input-radio {
+  display: inline-flex;
+    align-items: center;
+    margin-right: 1.125rem;
+    cursor: pointer;
+
+    div{
+        padding: .125rem;
+        margin-right: .5rem;
+        width: 1.125rem;
+        height: 1.125rem;
+
+        border: 2px solid gray;
+        border-radius: 50%;
+    }
+
+    &.active{
+        div{
+            border-color: #ee4d2d;
+        }
+
+        div::after{
+            content: '';
+            display: block;
+            height: 0.625rem;
+            width: 0.625rem;
+
+            background-color: #ee4d2d;
+            border-radius: 50%;
+        }
+    }
+}
+
+.input-select {
+  div{
+    display: inline-block;
+    padding: 0.375rem .75rem;
+    margin-right: .5rem;
+    border: 1px solid gray;
+    border-radius: 2px;
+
+    select{
+        width: 6.5rem;
+    }
+}
+}
+
+.widget-image-form {
+    &>div{
+        padding: 1.5rem 0rem;
+        border-left: 1px solid gray;
+    }
+}
+
+.thumbnail {
+  display: inline-block;
+    width: 100px;
+    height: 100px;
+
+    background-color: gray;
+    border-radius: 50%;
+    border: 3px solid gray;
+    cursor: pointer;
+}
+
+.widget-button-add-image {
+    input{
+        display: none;
+    }
+
+    button{
+        margin: 1.5rem 0 1rem;
+        padding: .25rem .5rem;
+
+        font-size: .875em;
+        color: #666;
+        border: 1px solid gray;
+    }
+
+    p{
+        font-size: .875em;
+        line-height: 1.25rem;
+    }
+}
+
+

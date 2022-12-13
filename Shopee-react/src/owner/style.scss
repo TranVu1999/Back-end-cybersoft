@@ -1,0 +1,662 @@
+$mainBorderColor: #d5d5d5;
+$mainColor: #ee4d2d;
+
+.owner-page-content{
+    // ================= Layout =================
+    .btn.btn-primary {
+        padding: .5rem .875rem;
+        background-color: $mainColor;
+        border-color: $mainColor;
+        font-size: .875rem;
+        border-radius: 4px;
+
+        span{
+            margin-right: .5rem;
+            font-size: 1.25rem;
+        }
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+
+    // ================= Product Category =================
+    .product-category-page {
+        background-color: #fff;
+    }
+
+    // ================= Shop Profile =================
+    .shop-profile-page {
+        background-color: #fff;
+    }
+
+    // ================= Invoice =================
+
+    .order-management-page {
+        background-color: #fff;
+
+        .widget-tabBox {
+            position: relative;
+            margin: 3rem 1.5rem 1rem;
+            font-size: .875rem;
+            border-bottom: 1px solid $mainBorderColor;
+            z-index: 1000;
+    
+            .tab-box__container {
+                overflow: hidden;
+                white-space: nowrap;
+                word-wrap: normal;
+            }
+        
+            .tab-box__item{
+                position: relative;
+                display: inline-block;
+                padding: .375rem 1.125rem;
+                margin-right: .25rem;
+                background-color: #fafafa;
+        
+                border-radius: 4px 4px 0 0;
+                border: 1px solid $mainBorderColor;
+                border-bottom: none;
+                transition: all .5s ease;
+        
+                cursor: pointer;
+        
+                &.active{
+                    font-weight: 600;
+                    color: #fff;
+                    background-color: $mainColor;
+                    border-color: $mainColor;
+                }
+            }
+    
+            .tab-box__control {
+                position: relative;
+                width: 4rem;
+                color: #999;
+
+                &.right {
+                    .list-option-tab-box {
+                        right: 0;
+                    }
+                }
+
+                &.left {
+                    .list-option-tab-box {
+                        left: 0;
+                    }
+                }
+            }
+
+            .list-option-tab-box {
+                position: absolute;
+                top: 100%;
+
+                min-width: 180px;
+                padding: 1rem 1rem;
+
+                background-color: #fff;
+                border: 1px solid $mainBorderColor;
+                border-radius: 4px;
+                z-index: 100;
+
+                .option-tab-box__item {
+                    cursor: pointer;
+                    line-height: 1.75rem;
+
+                    &:hover {
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+
+        .list-invoice {
+            min-height: 250px;
+
+            .empty-icon {
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+
+        .invoice__item {
+            margin-bottom: 2rem;
+            font-size: .875rem;
+            border: 1px solid $mainBorderColor;
+            border-radius: 4px;            
+        }
+
+        .invoice__item__header {
+            padding: .5rem .875rem;
+            background-color: #f6f6f6;
+            border-bottom: 1px solid $mainBorderColor;
+
+            label, p{
+                margin: 0;
+            }
+        }
+
+        .customer-thumbnail {
+            img{
+                width: 2rem;
+                height: 2rem;
+                margin-right: .5rem;
+                border-radius: 50%;
+            }
+        
+            button{
+                margin-left: .5rem;
+                font-size: 1.25rem;
+                color: #ee4d2d;
+            }
+        }
+
+        .invoice__item__body {
+            .invoice__list-product { 
+                flex: 1;
+                padding: 0 1rem;
+                border-right: 1px solid $mainBorderColor;
+
+                .product {
+                    padding: 1rem 0;
+                    border-top: 1px solid $mainBorderColor;
+
+                    &:first-child {
+                        border: none;
+                    }
+
+                    h5 {
+                        font-weight: 400;
+                    }
+                }
+
+                .thumbnail {
+                    margin-right: 1rem;
+                    height: 5rem;
+                    width: 5rem;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                .text {
+                    flex: 1;
+                }
+
+                h5{
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    word-wrap: break-word;
+
+                    font-weight: 600;
+                    font-size: 1rem;
+                    margin-bottom: .5rem;
+                }
+        
+                span{
+                    font-size: .75rem;
+                }
+        
+                .number{
+                    width: 3rem;
+                }
+
+                p {
+                    margin: 0;
+                    line-height: 1rem;
+                }
+            }
+
+            .invoice__total, .invoice__status, .invoice__type-transport{
+                border-right: 1px solid $mainBorderColor;
+            }
+        
+            .invoice__total{
+                padding: 1rem .75rem;
+                min-width: 8rem;
+                max-width: 8rem;
+            }
+        
+            .invoice__status{
+                padding: 1rem .75rem;
+                min-width: 11.5rem;
+                max-width: 11.5rem;
+        
+                strong{
+                    display: block;
+                    color: #333;
+                    font-size: 1rem;
+                    margin-bottom: .25rem;
+                }
+            }
+        
+            .invoice__type-transport{
+                min-width: 8rem;
+                max-width: 8rem;
+                padding: 1rem .5rem;
+            }
+        
+            .invoice__active{
+                min-width: 7rem;
+                max-width: 7rem;
+                border: none;
+                padding: 1rem .75rem;
+        
+                button{
+                    display: block;
+                    margin-bottom: .5rem;
+                    color: #4B4BF3;
+                }
+            }
+        }
+    }
+
+    // ================= Setting Address =================
+    .setting-address-page {
+        background-color: #fff;
+
+        .list-address {
+            padding: 1.125rem 1.5rem;
+
+            &>div:last-child{
+                border: none;
+            }
+        }
+
+        .address-item {
+            padding: .5rem 0;
+            margin-bottom: 1rem;
+            font-size: .875rem;
+            border-bottom: 1px solid #fafafa;
+
+            .widget-icon {
+                width: 1.75rem;
+                height: 1.75rem;
+                margin-right: 2rem;
+            
+                svg{
+                    fill: #00bfa5;
+                }
+            }
+
+            .text {
+                padding-right: 1rem;
+
+                .row {
+                    margin-bottom: .5rem;
+                }
+
+                .label {
+                    min-width: 8rem;
+                    margin-right: 2rem;
+                }
+
+                .value {
+                    color: #333;
+
+                    span.name{
+                        font-size: 1rem;
+                    }
+                }
+
+                .badge {
+                    margin-left: 1rem;
+                    font-weight: 400;
+
+                    span{
+                        display: inline-block;
+                        padding: 0 .5rem;
+                        margin-right: .25rem;
+
+                        font-size: .675rem;
+
+                        color: #40d0bd;
+                        background-color: #e8f9f7;
+                        border-radius: 2px;
+                        line-height: 1.125rem;
+                    }
+
+                    span.secondary{
+                        color: #eda500;
+                        background-color: #fff7e0;
+                    }
+
+                    span.warning{
+                        color: #ee4d2d;
+                        background-color: #fff1f0;
+                    }
+                }
+
+                button{
+                    display: block;
+                    color: #2673dd;
+                }
+            }
+        }
+    }
+
+    // ================= Add Product =================
+    .add-product-page {
+        .delivery-address__container {
+            margin-bottom: 1rem;
+            background-color: #fff;
+            padding-bottom: 2rem;
+            box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.09);
+
+            .border {
+                height: 5px;
+                width: 100%;
+                background-position-x: -30px;
+                background-size: 116px 3px;
+                background-image: repeating-linear-gradient(
+                    45deg,#6fa6d6,#6fa6d6 33px
+                    ,transparent 0,transparent 41px
+                    ,#f18d9b 0,#f18d9b 74px
+                    ,transparent 0,transparent 82px
+                );
+            }
+
+            .title {
+                padding: 2rem 1.5rem 1rem;
+
+                .btn:first-child {
+                    margin-right: .875rem;
+                }
+            }
+
+            h5 {
+                font-size: 1.125rem;
+                color: #ee4d2d; 
+
+                svg {
+                    margin-right: .5rem;
+                    fill: #ee4d2d;
+                }
+            }
+
+            .address-selected {
+                padding: 0 1.5rem;
+            }
+
+            .user-information {
+                max-width: 200px;
+                font-weight: 700;
+                font-size: 1rem;
+                color: #222;
+                line-height: 1.25rem;
+            }
+
+            .user-address {
+                span {
+                    display: inline-block;
+                    margin-left: .5rem;
+                    padding: 0 .25rem;
+                    border: 1px solid #00bfa5;
+                    line-height: 1rem;
+                    border-radius: .25rem;
+
+                    font-size: .75rem;
+                    color: #00bfa5;
+                }
+            }
+
+            .list-address {
+                padding: 0 1.5rem;
+                
+            }
+            .address-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1.25rem;
+
+                .user-information {
+                    margin: 0 2rem;
+                }
+            }
+
+            .buttons {
+                padding-left: 3.125rem;
+                font-size: .875rem;
+            }
+
+            .btn {
+                min-width: 6rem;
+                font-size: .875rem;
+                text-transform: capitalize;
+
+                color: #555;
+                border-radius: 0;
+                border: 1px solid rgba(0,0,0,.09);
+                box-shadow: 0 1px 1px 0 rgba(0,0,0,.03);
+
+                &:hover {
+                    background: rgba(0,0,0,.02);
+                    border-color: rgba(0,0,0,.09)!important;
+                }
+
+                svg {
+                    height: .875rem;
+                    margin-right: .5rem;
+                    fill: #555;
+                }
+            }
+
+            .btn-save {
+                margin-right: 1rem;
+                background-color: #ee4d2d;
+                color: #fff;
+
+                &:hover {
+                    background-color: #f05d40;
+                }
+            }
+
+            .btn-back {
+                border: 1px solid #d5d5d5;
+            }
+        }
+    }
+    
+}
+
+.owner-tab-box{
+    font-size: .875rem;
+    color: #333;
+    border-bottom: 1px solid #d5d5d5;
+
+    a, div{
+        position: relative;
+        padding: 1.125rem 1.5rem;
+        text-align: center;
+        cursor: pointer;
+
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+        }
+
+        &.active{
+            color: #ee4d2d;
+            font-weight: 600;
+
+            &:after{
+                background-color: #ee4d2d;
+            }
+        }
+    }
+}
+
+.owner-setting-shop__widget-list-setup{
+    padding-bottom: 3rem;
+}
+
+.owner-setting-shop__widget-row{
+    padding-left: 1.5rem;
+
+    .line{
+        margin: 1rem 0 0 3rem;
+        height: 1px;
+        width: 100%;
+        background-color: #d5d5d5;
+    }
+}
+
+.owner-setting-shop__widget-icon{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 1.5rem;
+
+    svg{
+        fill: #999;
+    }
+}
+
+.owner-setting-shop__widget-text{
+    padding: 1.125rem 1.5rem 0 0;
+
+    p{
+        color: #333;
+        font-size: 1.125rem;
+        margin: 0;
+    }
+
+    span{
+        font-size: .875rem;
+        color: #999;
+    }
+}
+
+// ================= ADD NEW PRODUCT =================
+.owner-product-add{
+    h5{
+        margin-bottom: 2.5rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #000;
+    }
+
+    .widget-input-row{
+        display: flex;
+        align-items: start;
+        margin-bottom: 1.5rem;
+        font-size: .875rem;
+
+        .label{
+            width: 10.5rem;
+            margin-right: 1.5rem;
+            font-size: .875rem;
+            text-align: right;
+        }
+
+        ul{
+            margin-left: 1.5rem;
+            max-width: 60%;
+            color: #999;
+        }
+    }
+
+    .button-add{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: .5rem .875rem;
+        width: 100%;
+
+        color: #1791f2;
+        background-color: transparent;
+        border: 1px dashed #1791f2;
+        border-radius: 4px;
+
+        span{
+            margin-right: .5rem;
+            font-size: 1.125rem;
+        }
+    }
+}
+
+div[class*="button"], div[class*="btn"]{
+    cursor: pointer;
+}
+
+
+// ======================== INPUT ===========================
+.error{
+    .input-box{
+        border-color: #ee4d2d;
+    }
+
+    p.notify{
+        margin: 0;
+        color: #ee4d2d;
+        font-size: .875rem;
+    }
+}
+
+.input-box{
+    width: 100%;
+    padding: .375rem .875rem;
+    border-radius: 4px;
+    border: 1px solid #d5d5d5;
+
+    input, textarea{
+        width: 100%;
+    }
+}
+
+
+// ======================== BUTTON ===========================
+.shopee-primary-btn{
+    padding: .5rem .875rem;
+
+    color: #fff;
+    background-color: #ee4d2d;
+    border-color: #ee4d2d;
+
+    white-space: nowrap;
+    border-radius: 4px;
+
+    &.disabled{
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+}
+
+
+
+div.custom-scrollbar{
+    /* width */
+    &::-webkit-scrollbar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+
+        width: .375rem;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: transparent; 
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 15px; 
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #888; 
+    }
+}
+

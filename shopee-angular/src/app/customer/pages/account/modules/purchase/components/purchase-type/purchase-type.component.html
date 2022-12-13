@@ -1,0 +1,23 @@
+<div class="mb-3 purchase-type">
+  <div class="mb-3 nav-tab d-flex justify-content-between bg-white">
+    <ng-container
+      *ngFor="let type of purchaseTypes; let index= index;"
+    >
+      <div
+        class="py-3 flex-fill text-center item"
+        [ngClass]="{'active': (indexActiveTab - 1) === index}"
+      >
+        <a [routerLink]="['/customer/account/purchase']" [queryParams]="{type: type.id}">{{type.title}}</a>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="p-2 d-flex filter">
+    <button class="text-center"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <input
+      type="text"
+      placeholder="Tìm kiếm theo Tên Shop, ID đơn hàng hoặc Tên Sản phẩm"
+      class="flex-fill"
+    >
+  </div>
+</div>

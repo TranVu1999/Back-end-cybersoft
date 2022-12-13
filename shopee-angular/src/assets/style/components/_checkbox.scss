@@ -1,0 +1,37 @@
+@use 'src/assets/style/variables/fontSize' as fs;
+@use 'src/assets/style/variables/color' as color;
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid color.$color-29;
+  border-radius: 2px;
+
+  box-shadow: inset 0 2px 0 0 rgb(0 0 0 / 2%);
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%) rotate(-45deg);
+
+    display: none;
+    width: 9px;
+    height: 5px;
+
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+  }
+
+  &.active {
+    background-color: color.$color-2;
+    border-color: color.$color-2;
+
+    &::after {
+      display: block;
+    }
+  }
+}

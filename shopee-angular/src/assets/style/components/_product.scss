@@ -1,0 +1,51 @@
+@use 'src/assets/style/variables/fontSize' as fs;
+@use 'src/assets/style/variables/color' as color;
+
+.product {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-shadow: 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 10%);
+
+  &:hover {
+    border-color: color.$color-2;
+  }
+
+  &__title {
+    font-size: fs.$fs-5;
+    line-height: 1.15;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  &__text {
+    padding: 8px 8px;
+  }
+
+  &__price {
+    color: color.$color-2;
+
+    &--original {
+      margin: 0 4px 0 0;
+      text-decoration-line: line-through;
+      color: #000;
+      opacity: .26;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: fs.$fs-2;
+    }
+
+    &--reliaty {
+      font-size: fs.$fs-1;
+    }
+  }
+
+  &__delivery-address {
+    font-size: fs.$fs-5;
+  }
+
+}

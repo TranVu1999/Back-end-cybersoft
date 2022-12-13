@@ -1,0 +1,34 @@
+@use 'src/assets/style/variables/fontSize' as fs;
+@use 'src/assets/style/variables/color' as color;
+
+.widget-content {
+  bottom: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 20.3125rem 11.875rem;
+  align-items: center;
+  font-size: fs.$fs-1;
+
+  .widget-voucher {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    align-items: center;
+    padding: 0.75rem 0;
+
+    svg {
+      width: 21px;
+      height: 20px;
+      fill: color.$color-2;
+    }
+  }
+
+  .total {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-top: 1px dashed color.$color-20;
+
+    .btn-submit-purchase {
+      min-width: 200px;
+    }
+  }
+}

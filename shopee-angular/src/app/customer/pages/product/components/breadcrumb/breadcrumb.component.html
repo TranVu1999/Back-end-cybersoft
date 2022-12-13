@@ -1,0 +1,10 @@
+<nav class="breadcrumb">
+  <ul class="d-flex align-items-center">
+    <ng-container *ngFor="let item of breadcrumb; let last = last">
+      <li class="item">
+        <a href="#">{{item.title}}</a>
+        <i *ngIf="!last" class="mx-2 fa-solid fa-chevron-right"></i>
+      </li>
+    </ng-container>
+  </ul>
+</nav>

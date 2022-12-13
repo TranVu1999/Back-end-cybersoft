@@ -1,0 +1,53 @@
+@use 'src/assets/style/variables/fontSize' as fs;
+@use 'src/assets/style/variables/color' as color;
+
+.purchase {
+  &__total {
+    .price {
+      color: color.$color-2;
+      font-size: 24px;
+    }
+  }
+
+  &__footer {
+    color: color.$color-10;
+    button {
+      min-width: 150px;
+    }
+  }
+}
+
+.product {
+  &__thumbnail {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+
+  &__title,
+  &__amount {
+    color: color.$color-11;
+  }
+
+  &__title {
+    font-size: fs.$fs-1;
+    line-height: 22px;
+  }
+
+  &__classification {
+    color: color.$color-10;
+  }
+
+  &__price {
+    color: color.$color-2;
+
+    &--original {
+      margin: 0 4px 0 0;
+      text-decoration-line: line-through;
+      color: #000;
+      opacity: .26;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

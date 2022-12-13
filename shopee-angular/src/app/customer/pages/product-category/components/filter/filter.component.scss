@@ -1,0 +1,49 @@
+@use 'src/assets/style/variables/fontSize' as fs;
+@use 'src/assets/style/variables/color' as color;
+
+.widget-content {
+  .header {
+    color: color.$color-17;
+    font-size: fs.$fs-1;
+
+    svg {
+      width: 12px;
+      height: 12px;
+      stroke: color.$color-17;
+    }
+  }
+}
+
+.widget-item {
+  border-bottom: 1px solid color.$color-20;
+}
+
+.select-item {
+  cursor: pointer;
+
+  .check-box {
+    width: 13px;
+    height: 13px;
+    background-color: color.$color-25;
+    border: 1px solid color.$color-26;
+    border-radius: 2px;
+
+    svg {
+      display: block;
+      stroke: color.$color-2;
+      fill: color.$color-2;
+    }
+  }
+
+  svg {
+    width: 7px;
+    height: 7px;
+  }
+
+  &.see-more:hover {
+    color: color.$color-2;
+    svg {
+      stroke: color.$color-2;
+    }
+  }
+}

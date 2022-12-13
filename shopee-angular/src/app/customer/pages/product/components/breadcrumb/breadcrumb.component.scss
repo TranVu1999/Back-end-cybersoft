@@ -1,0 +1,11 @@
+@use 'src/assets/style/variables/color' as color;
+
+.breadcrumb {
+  .item {
+    color: color.$color-16;
+
+    :last-child {
+      color: color.$color-17;
+    }
+  }
+}

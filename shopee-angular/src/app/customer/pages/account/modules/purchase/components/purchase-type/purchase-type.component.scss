@@ -1,0 +1,39 @@
+@use 'src/assets/style/variables/color' as color;
+@use 'src/assets/style/variables/fontSize' as fs;
+
+.nav-tab {
+  .item {
+    font-size: fs.$fs-1;
+    border-bottom: 2px solid transparent;
+
+    &:hover,
+    &.active {
+      color: color.$color-2;
+    }
+
+    &.active {
+      border-color: color.$color-2;
+    }
+  }
+}
+
+.filter {
+  height: 40px;
+  background-color: color.$color-4;
+
+  &:focus-within {
+    button {
+      color: color.$color-15;
+    }
+  }
+
+  button {
+    width: 40px;
+    color: #bbb;
+    font-size: fs.$fs-1;
+  }
+
+  input {
+    background-color: transparent;
+  }
+}

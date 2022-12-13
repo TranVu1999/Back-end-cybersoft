@@ -1,0 +1,30 @@
+@use 'src/assets/style/variables/color' as color;
+@use 'src/assets/style/variables/fontSize' as fs;
+
+.address {
+  color: color.$color-10;
+  font-size: fs.$fs-2;
+
+  .receiver__name {
+    font-size: fs.$fs-1;
+    color: color.$color-11;
+  }
+
+  .separator {
+    width: 2px;
+  }
+
+  .btn {
+    font-size: fs.$fs-2;
+    
+    &--update {
+      color: color.$color-12;
+    }
+
+    &--set-default {
+      color: color.$color-10;
+    }
+  }
+}
+
+

@@ -1,0 +1,57 @@
+.sidebar {
+  width: 180px;
+}
+
+.widget-account{
+  font-size: 15px;
+  border-bottom: 1px solid gray;
+
+  .thumbnail {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .text {
+    flex: 1;
+    flex-shrink: 0;
+
+    strong{
+      color: #333;
+    }
+
+    a{
+      font-size: 0.875em;
+    }
+  }
+}
+
+.widget-dropdown {
+  margin-bottom: .875rem;
+  font-size: 15px;
+
+  a.active {
+    color: #ee4d2d;
+  }
+}
+
+.widget-dropdown-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.widget-list-dropdown-item {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .4s cubic-bezier(.4,0,.2,1),opacity .4s cubic-bezier(.4,0,.2,1);
+
+  &.open{
+      opacity: 1;
+      max-height: 500px;
+  }
+}
+
+.widget-dropdown-item {
+  padding-left: 2.25rem;
+  line-height: 1.875rem;
+}

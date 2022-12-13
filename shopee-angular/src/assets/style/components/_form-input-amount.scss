@@ -1,0 +1,19 @@
+@use 'src/assets/style/variables/fontSize' as fs;
+@use 'src/assets/style/variables/color' as color;
+
+.form-input-amount {
+  border: 1px solid color.$color-20;
+  border-radius: 2px;
+
+  button {
+    height: 32px;
+    padding: 0 10px;
+  }
+
+  .result {
+    height: 32px;
+    width: 50px;
+    border-right: 1px solid color.$color-20;
+    border-left: 1px solid color.$color-20;
+  }
+}

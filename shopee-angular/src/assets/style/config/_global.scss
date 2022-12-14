@@ -1,5 +1,5 @@
-@use 'src/assets/style/variables/color' as color;
-@use 'src/assets/style/variables/fontSize' as fs;
+@use 'color' as color;
+@use 'fontSize' as fs;
 
 .bg-size-contain {
   background-size: contain;
@@ -162,4 +162,25 @@ $text-colors: (
   .text-#{$key} {
     color: $value;
   }
+}
+
+// ============ FORM CONTROL ============
+.control {
+    display: flex;
+    align-items: center;
+    border: 1px solid color.$color-20;
+    border-radius: 3px;
+}
+
+.control--sm {
+    height: 24px;
+}
+
+.control--md {
+    padding: 0 12px;
+    height: 30px;
+}
+
+.control--lg {
+    height: 38px;
 }

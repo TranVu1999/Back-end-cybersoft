@@ -1,0 +1,22 @@
+@use 'color' as color;
+@use 'fontSize' as fs;
+
+$text-colors: (
+  "primary-alt": color.$color-2,
+  "secondary-alt": color.$color-37,
+  "default-alt": color.$color-3,
+);
+
+@each $key, $value in $text-colors {
+  .text-#{$key} {
+    color: $value;
+  }
+}
+
+.fs-sm {
+  font-size: fs.$fs-3;
+}
+
+svg.text-primary-alt {
+  fill: color.$color-2;
+}

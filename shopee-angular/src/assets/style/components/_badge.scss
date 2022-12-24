@@ -1,0 +1,21 @@
+@use 'color' as color;
+@use 'fontSize' as fs;
+
+.badge-primary-alt {
+    color: color.$color-14;
+}
+
+*[class*="badge"] {
+    font-weight: 400;
+}
+
+$badge-background-colors: (
+    "primary-alt": color.$color-2,
+    "default-alt": color.$color-3,
+);
+
+@each $key, $value in $badge-background-colors {
+    .badge-#{$key} {
+        background-color: $value;
+    }
+}

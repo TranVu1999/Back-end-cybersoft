@@ -1,0 +1,11 @@
+@use 'color.scss' as color;
+
+// Border Style
+.border-dashed {
+  border-style: dashed;
+}
+
+// Border Color
+.border-primary-alt {
+  border-color: color.$color-2;
+}

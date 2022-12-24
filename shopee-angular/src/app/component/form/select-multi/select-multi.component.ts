@@ -1,54 +1,57 @@
-import { Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit} from '@angular/core';
+// Components
+import { SelectBaseComponent } from '../select-base/select-base.component';
+// Models
+import { OptionInterface } from 'src/app/model/option.interface';
 
 @Component({
     selector: 'app-select-multi',
     templateUrl: './select-multi.component.html',
-    styleUrls: ['./select-multi.component.scss']
+    styleUrls: ['../select-base/select-base.component.scss']
 })
-export class SelectMultiComponent implements OnInit, OnDestroy {
-    @ViewChild('mainElement') mainElement!: ElementRef;
+export class SelectMultiComponent extends SelectBaseComponent implements OnInit, OnDestroy {
+    result: OptionInterface[] = [];
 
-    isShowSelectionsBox = false;
-    isShowFormAddNewProperty = false;
-
-    constructor(
-        private renderer: Renderer2
-    ) { }
-
-    ngOnInit() {
-
+    override ngOnInit(): void {
+        this.result = [
+            { id: 1, title: 'AJIMAL' },
+            { id: 2, title: 'AKUBA' },
+            { id: 3, title: 'ALAMODEvn' }
+        ];
+        this.data = [
+            { id: 1, title: 'AJIMAL' },
+            { id: 2, title: 'AKUBA' },
+            { id: 3, title: 'ALAMODEvn' },
+            { id: 4, title: 'ALICE TO' },
+            { id: 5, title: 'AMADO' },
+            { id: 6, title: 'ANLY' },
+            { id: 7, title: 'ANN CHERY' },
+            { id: 8, title: 'ANN SARA' },
+            { id: 9, title: 'ANNACOCO' },
+            { id: 10, title: 'AJIMAL' }
+        ];
     }
 
-    ngOnDestroy(): void {
-        this.handleClearListenerFunction();
+    // Functionalities
+    checkIsChecked(option: OptionInterface): boolean {
+        return this.result.some(selection => selection.id === option.id);
     }
 
-    // Handle Events
-    handleHideSelectionBox(): void {
-        this.isShowSelectionsBox = false;
-        this.handleClearListenerFunction();
+    //  Handle Events
+    handleChoseOption(option: OptionInterface): void {
+        const idx = this.result.findIndex(selection => option.id === selection.id);
+        if(idx === -1) {
+            this.result.push(option);
+        } else {
+            const tempResult: OptionInterface[] = [];
+            this.result.forEach(selection => {
+                if(selection.id !== option.id) {
+                    tempResult.push(selection);
+                }
+            });
+
+            this.result = structuredClone(tempResult);
+        }
     }
-
-    handleShowSelectionBox(): void {
-        this.isShowSelectionsBox = true;
-        this.handleClearListenerFunction = this.renderer.listen('window', 'click', (e: Event) => {
-            if(!this.mainElement.nativeElement.contains(e.target)) {
-                this.handleHideSelectionBox();
-                console.log('listener: ', 'SelectComponent');
-            }
-        })
-    }
-
-    handleHideFormAddNewProperty(): void {
-        this.isShowFormAddNewProperty = false;
-    }
-
-    handleShowFormAddNewProperty(): void {
-        this.isShowFormAddNewProperty = true;
-    }
-
-    handleClearListenerFunction(): void {}
-
-
 
 }

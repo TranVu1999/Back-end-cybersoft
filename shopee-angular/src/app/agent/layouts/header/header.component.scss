@@ -1,0 +1,97 @@
+@use 'color.scss' as color;
+@use 'fontSize.scss' as fs;
+
+.main-wrapper {
+  padding: 8px 16px;
+  box-shadow: 0 1px 4px 0 rgb(74 74 78 / 12%);
+
+  .breadcrumb {
+    font-size: 18px;
+    color: color.$color-35;
+
+    li:last-child {
+      color: color.$color-38;
+    }
+
+    .logo {
+      width: 28px;
+      fill: color.$color-2;
+    }
+
+    i.icon {
+      svg {
+        width: 16px;
+        fill: color.$color-35;
+      }
+    }
+  }
+
+  .widget-account {
+    .account-box {
+      padding: 4px 10px 4px 4px;
+      border-radius: 20px;
+
+      &:hover {
+        background-color: rgba(0,0,0,.06);
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  .toolbox {
+    .toolbox__control {
+      button {
+        height: 40px;
+        width: 40px;
+
+        &:hover {
+          background-color: rgba(0,0,0,.06);
+        }
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .notification {
+    &__control {
+      button {
+        height: 40px;
+        width: 40px;
+
+        &:hover {
+          background-color: rgba(0,0,0,.06);
+        }
+
+        .number {
+          top: 35%;
+          left: 70%;
+          transform: translate(-50%, -50%);
+
+          min-width: 20px;
+          background-color: color.$color-2;
+          color: color.$color-14;
+          font-size: fs.$fs-3;
+          line-height: 16px;
+          border-radius: 50px;
+        }
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .btn-uni {
+    border-radius: 25px;
+  }
+}

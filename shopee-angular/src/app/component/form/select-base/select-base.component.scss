@@ -1,0 +1,80 @@
+@use 'color' as color;
+@use 'fontSize' as fs;
+
+.main-wrapper {
+    .icon {
+        svg {
+            height: 16px;
+            width: 16px;
+            fill: color.$color-30;
+        }
+    }
+
+    .widget-result {
+        height: 38px;
+        border: 1px solid color.$color-20;
+        border-radius: 3px;
+
+        .selection {
+            background-color: color.$color-33;
+            border-color: color.$color-34;
+            border-radius: 4px;
+
+            .icon {
+                svg {
+                    height: 12px;
+                }
+            }
+        }
+    }
+
+    .widget-option {
+        top: calc(100% + 2px);
+        left: 0;
+        border-color: color.$color-20;
+        border-radius: 3px;
+        background-color: #fff;
+        z-index: 100;
+
+        .list-option {
+            max-height: 160px;
+
+            .item {
+                display: block;
+                padding: 5px 0;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: color.$color-31;
+                }
+
+                &.active {
+                    color: color.$color-2;
+
+                    svg {
+                        fill: color.$color-2;
+                    }
+                }
+            }
+        }
+    }
+
+    button.add-new-property {
+        color: color.$color-32;
+
+        svg {
+            fill: color.$color-32;
+        }
+    }
+
+    .widget-form-add-new-property {
+        button {
+            width: 24px;
+            border-radius: 3px;
+
+            &+button {
+                margin-left: 6px;
+            }
+        }
+    }
+}

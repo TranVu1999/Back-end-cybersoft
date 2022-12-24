@@ -1,0 +1,120 @@
+@use 'color' as color;
+@use 'fontSize' as fs;
+
+.control {
+    display: flex;
+    align-items: center;
+    border: 1px solid color.$color-20;
+    border-radius: 4px;
+
+    &:focus-within {
+      border-color: color.$color-22;
+    }
+
+    .devide-line {
+        width: 1px;
+        height: 70%;
+        background-color: color.$color-20;
+
+        &+.label {
+            margin-left: 12px;
+        }
+
+        &+input {
+            margin-left: 12px;
+        }
+    }
+
+    .label {
+        color: color.$color-35;
+
+        &+.devide-line {
+            margin-left: 12px;
+        }
+
+        .icon {
+          svg {
+            width: 16px;
+            height: 16px;
+            fill: color.$color-35;
+          }
+        }
+    }
+
+    &--invalid {
+        border-color: color.$color-2;
+    }
+
+    &--media {
+        display: block;
+        height: 76px;
+        width: 76px;
+        padding: 6px;
+        border-style: dashed;
+
+        &:hover {
+            background-color: color.$color-36;
+            border-color: color.$color-2;
+        }
+
+        .icon {
+            svg {
+                width: 23px;
+                height: 23px;
+                fill: color.$color-2;
+            }
+        }
+
+        span {
+            font-size: fs.$fs-3;
+            color: color.$color-2;
+            line-height: 14px;
+        }
+    }
+
+    textarea {
+      padding: 12px 8px;
+    }
+}
+
+.control--sm {
+  height: 24px;
+}
+
+.control--md {
+  padding: 0 12px;
+  height: 30px;
+}
+
+.control--lg {
+  height: 38px;
+}
+
+.control.control--radio {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+
+  &.active {
+    border-color: color.$color-2;
+    background-color: color.$color-2;
+  }
+
+  &:hover {
+    border-color: color.$color-2;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}

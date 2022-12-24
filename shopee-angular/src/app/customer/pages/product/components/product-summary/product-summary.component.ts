@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-summary.component.scss']
 })
 export class ProductSummaryComponent implements OnInit {
+  isLoading = true;
 
   constructor() { }
 

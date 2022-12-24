@@ -3,23 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 // modules
 import {CustomerModule} from './customer/customer.module';
+import { AgentModule } from './agent/agent.module';
+import { ComponentModule } from './component/component.module';
 import { AppRoutingModule } from './app-routing.module';
 // components
 import { AppComponent } from './app.component';
-import { SelectComponent } from './component/form/select/select.component';
-import { SelectMultiComponent } from './component/form/select-multi/select-multi.component';
+// Pipes
+import { SafeHtmlPipe } from './pipe/safe-html.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SelectComponent,
-    SelectMultiComponent
-   ],
+    // Pipes
+    SafeHtmlPipe
+  ],
   imports: [
     BrowserModule,
     CommonModule,
     AppRoutingModule,
-    CustomerModule
+    CustomerModule,
+    AgentModule,
+    ComponentModule
   ],
   providers: [],
   bootstrap: [AppComponent]

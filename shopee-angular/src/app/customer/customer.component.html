@@ -1,6 +1,9 @@
-<app-header></app-header>
+<app-header *ngIf = 'isShowCustomerHeader'></app-header>
 
-<div class="customer-section">
+<div 
+  class="customer-section" 
+  [ngClass] = "{'is-show-customer-header': isShowCustomerHeader}"
+>
     <router-outlet></router-outlet>
     <p>customer</p>
 </div>

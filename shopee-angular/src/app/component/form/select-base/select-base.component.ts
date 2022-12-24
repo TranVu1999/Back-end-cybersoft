@@ -1,17 +1,15 @@
-import { Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
 // Models
 import { OptionInterface } from 'src/app/model/option.interface';
 
 @Component({
-    selector: 'app-select',
-    templateUrl: './select.component.html',
-    styleUrls: ['./select.component.scss']
+    selector: 'app-select-base',
+    template: 'Select single base'
 })
-export class SelectComponent implements OnInit, OnDestroy {
+export class SelectBaseComponent implements OnInit, OnDestroy {
     @ViewChild('mainElement') mainElement!: ElementRef;
 
     data: OptionInterface[] = [];
-    result: OptionInterface | null = null;
     isShowSelectionsBox = false;
     isShowFormAddNewProperty = false;
 
@@ -20,7 +18,6 @@ export class SelectComponent implements OnInit, OnDestroy {
     ) { }
 
     ngOnInit() {
-        this.prepareData();
 
     }
 
@@ -30,18 +27,6 @@ export class SelectComponent implements OnInit, OnDestroy {
 
     // Functionalities
     prepareData(): void {
-        this.data = [
-            { id: 1, title: 'AJIMAL' },
-            { id: 2, title: 'AKUBA' },
-            { id: 3, title: 'ALAMODEvn' },
-            { id: 4, title: 'ALICE TO' },
-            { id: 5, title: 'AMADO' },
-            { id: 6, title: 'ANLY' },
-            { id: 7, title: 'ANN CHERY' },
-            { id: 8, title: 'ANN SARA' },
-            { id: 9, title: 'ANNACOCO' },
-            { id: 10, title: 'AJIMAL' }
-        ]
     }
 
     // Handle Events
@@ -66,11 +51,6 @@ export class SelectComponent implements OnInit, OnDestroy {
 
     handleShowFormAddNewProperty(): void {
         this.isShowFormAddNewProperty = true;
-    }
-
-    handleChoseOption(option: OptionInterface): void {
-        this.result = option;
-        this. handleHideSelectionBox();
     }
 
     handleClearListenerFunction(): void {}

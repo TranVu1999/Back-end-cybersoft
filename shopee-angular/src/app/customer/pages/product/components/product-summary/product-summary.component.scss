@@ -2,7 +2,8 @@
 @use 'src/assets/style/variables/color' as color;
 
 .product {
-
+  border: none;
+  
   &__thumbnail {
     padding: 15px;
     width: 450px;
@@ -34,6 +35,16 @@
 
   &__text {
     padding: 20px 35px 0 20px;
+
+    .skeleton-box {
+      &.line {
+        height: 20px;
+      }
+
+      &.paragraph {
+        height: 300px;
+      }
+    }
   }
 
   &__title {
@@ -239,6 +250,12 @@
 .agent{
   padding: 22px;
 
+  &.skeleton {
+    .agent__thumbnail {
+      width: 320px;
+    }
+  }
+
   &__avatar {
     width: 80px;
     height: 80px;
@@ -247,6 +264,10 @@
   &__statistic {
     &>div:first-child {
       width: 25%;
+    }
+
+    &.skeleton-box {
+      height: 70px;
     }
 
     &>div {

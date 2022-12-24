@@ -1,4 +1,4 @@
-<div class="product product--summary">
+<div *ngIf = "!isLoading" class="product product--summary">
   <div class="mb-3 d-flex bg-white ">
     <div class="product__thumbnail">
       <div class="mb-3 product__avatar" style="background-image: url(https://cf.shopee.vn/file/c129d1bdcadcaf263452a132333850e1_tn);">
@@ -433,4 +433,41 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sapiente tempora quasi eius eos minima ratione sit, dignissimos facere quas deserunt voluptatum odit aliquam, explicabo dolorum dolorem alias aliquid culpa!</p>
     </div>
   </div>
+</div>
+
+<div *ngIf = "isLoading" class="product product--summary skeleton">
+  <div class="mb-3 d-flex bg-white ">
+    <div class="product__thumbnail">
+      <div class="w-100 mb-3 product__avatar skeleton-box">
+      </div>
+
+      <div class="product__image-slide">
+        <div class="item skeleton-box"></div>
+        <div class="item skeleton-box"></div>
+        <div class="item skeleton-box"></div>
+        <div class="item skeleton-box"></div>
+        <div class="item skeleton-box"></div>
+      </div>
+    </div>
+
+    <div class="flex-fill product__text">
+      <div class="w-100 skeleton-box line"></div>
+      <div class="mb-5 w-75 skeleton-box line"></div>
+      <div class="w-100 skeleton-box paragraph"></div>
+    </div>
+  </div>
+
+  <!-- Start :: Agent Information -->
+  <div class="mb-3 d-flex bg-white agent skeleton">
+    <div class="d-flex align-items-center agent__thumbnail">
+      <div class="me-3 rounded-circle overflow-hidden agent__avatar skeleton-box">
+
+      </div>
+    </div>
+
+    <div class="ms-5 ps-5 border-start flex-fill d-flex align-items-center agent__statistic skeleton-box">
+
+    </div>
+  </div>
+  <!-- End :: Agent Information -->
 </div>

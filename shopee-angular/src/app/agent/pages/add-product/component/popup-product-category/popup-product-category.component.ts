@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-popup-product-category',
@@ -9,7 +10,9 @@ export class PopupProductCategoryComponent implements OnInit {
   @Output() closePopup: EventEmitter<any> = new EventEmitter();
   listCategories: any[] = [];
 
-  constructor() { }
+  constructor(
+    private bsModalRef: BsModalRef
+  ) { }
 
   ngOnInit() {
     this.listCategories = [
@@ -38,8 +41,7 @@ export class PopupProductCategoryComponent implements OnInit {
 
   // Handle Events
   handleClosePopup(): void {
-    if(!this.closePopup) return;
-    this.closePopup.emit();
+    this.bsModalRef.hide();
   }
 
 }

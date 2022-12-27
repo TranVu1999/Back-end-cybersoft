@@ -1,0 +1,16 @@
+@use 'color.scss' as color;
+
+.main-wrapper {
+
+    .tab {
+        &__selection {
+            border-bottom: 1px solid color.$color-20;
+
+            &__item {
+                &.selected {
+                    border-bottom: 2px solid color.$color-22;
+                }
+            }
+        }
+    }
+}

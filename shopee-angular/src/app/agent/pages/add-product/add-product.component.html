@@ -42,7 +42,12 @@
       <label class="me-3 text-end attribute-name"><span class="text-primary-alt">*</span> Ngành hàng</label>
       <div class="flex-fill">
         <div class="mb-3 control control--lg">
-          <input class="w-100" type="text" placeholder="Nhập nội dung">
+          <input
+            class="w-100"
+            type="text"
+            placeholder="Nhập nội dung"
+						(focus) = "handleOpenPopupProductCategory()"
+        	>
           <div class="devide-line"></div>
           <span class="label">
             <i class="icon">
@@ -81,102 +86,37 @@
         </div>
       </div>
 
-      <!-- Chất liệu -->
-      <div class="col-6">
-        <div class="mb-4 d-flex">
-          <label class="me-3 text-end attribute-name"> Chất liệu</label>
+      <div
+				*ngFor = "let attr of attributes; let index = index"
+			 	class="col-6"
+			>
+        <div
+					*ngIf = "index < limitNumShowAttribute"
+					class="mb-4 d-flex"
+				>
+          <label class="me-3 text-end attribute-name">{{attr.title}}</label>
           <div class="flex-fill">
             <app-select-single></app-select-single>
           </div>
         </div>
       </div>
 
-      <!-- Tên tổ chức chịu trách nhiệm sản xuất -->
-      <div class="col-6">
-        <div class="mb-4 d-flex">
-          <label class="me-3 text-end attribute-name"> Tên tổ chức chịu trách nhiệm sản xuất</label>
+			<div class="col-12">
+				<div class="mb-4 d-flex">
+          <label class="me-3 text-end attribute-name"></label>
           <div class="flex-fill">
-            <app-select-single></app-select-single>
-          </div>
-        </div>
-      </div>
+            <button class="text-primary-alt" (click) = "handleToggleShowFullListAttribute()">
+							{{limitNumShowAttribute === 9 ? 'Hiển thị đầy đủ danh sách' : 'Rút gọn danh sách'}}
 
-      <!-- Rất lớn -->
-      <div class="col-6">
-        <div class="mb-4 d-flex">
-          <label class="me-3 text-end attribute-name"> Rất lớn</label>
-          <div class="flex-fill">
-            <app-select-single></app-select-single>
-          </div>
-        </div>
-      </div>
+							<i *ngIf = "limitNumShowAttribute === 9" class="icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8,9.18933983 L4.03033009,5.21966991 C3.73743687,4.9267767 3.26256313,4.9267767 2.96966991,5.21966991 C2.6767767,5.51256313 2.6767767,5.98743687 2.96966991,6.28033009 L7.46966991,10.7803301 C7.76256313,11.0732233 8.23743687,11.0732233 8.53033009,10.7803301 L13.0303301,6.28033009 C13.3232233,5.98743687 13.3232233,5.51256313 13.0303301,5.21966991 C12.7374369,4.9267767 12.2625631,4.9267767 11.9696699,5.21966991 L8,9.18933983 Z"></path></svg>
+							</i>
 
-      <!-- Phong cách -->
-      <div class="col-6">
-        <div class="mb-4 d-flex">
-          <label class="me-3 text-end attribute-name"> Phong cách</label>
-          <div class="flex-fill">
-            <app-select-single></app-select-single>
-          </div>
-        </div>
-      </div>
+							<i *ngIf = "limitNumShowAttribute !== 9"  class="icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8,6.81066017 L11.9696699,10.7803301 C12.2625631,11.0732233 12.7374369,11.0732233 13.0303301,10.7803301 C13.3232233,10.4874369 13.3232233,10.0125631 13.0303301,9.71966991 L8.53033009,5.21966991 C8.23743687,4.9267767 7.76256313,4.9267767 7.46966991,5.21966991 L2.96966991,9.71966991 C2.6767767,10.0125631 2.6767767,10.4874369 2.96966991,10.7803301 C3.26256313,11.0732233 3.73743687,11.0732233 4.03033009,10.7803301 L8,6.81066017 Z"></path></svg>
+							</i>
 
-      <!-- Petite -->
-      <div class="col-6">
-        <div class="mb-4 d-flex">
-          <label class="me-3 text-end attribute-name"> Petite</label>
-          <div class="flex-fill">
-            <app-select-single></app-select-single>
-          </div>
-        </div>
-      </div>
-
-      <!-- Chiều dài áo -->
-      <div class="col-6">
-        <div class="mb-4 d-flex">
-          <label class="me-3 text-end attribute-name"> Chiều dài áo</label>
-          <div class="flex-fill">
-            <app-select-single></app-select-single>
-          </div>
-        </div>
-      </div>
-
-      <!-- Xuất xứ -->
-      <div class="col-6">
-        <div class="mb-4 d-flex">
-          <label class="me-3 text-end attribute-name"> Xuất xứ</label>
-          <div class="flex-fill">
-            <app-select-single></app-select-single>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mùa -->
-      <div class="col-6">
-        <div class="mb-4 d-flex">
-          <label class="me-3 text-end attribute-name"> Mùa</label>
-          <div class="flex-fill">
-            <app-select-single></app-select-single>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mẫu -->
-      <div class="col-6">
-        <div class="mb-4 d-flex">
-          <label class="me-3 text-end attribute-name"> Mẫu</label>
-          <div class="flex-fill">
-            <app-select-single></app-select-single>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cropped Top -->
-      <div class="col-6">
-        <div class="mb-4 d-flex">
-          <label class="me-3 text-end attribute-name"> Cropped Top</label>
-          <div class="flex-fill">
-            <app-select-single></app-select-single>
+						</button>
           </div>
         </div>
       </div>

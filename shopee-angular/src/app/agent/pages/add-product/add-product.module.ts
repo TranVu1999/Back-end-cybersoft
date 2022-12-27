@@ -8,6 +8,7 @@ import {ModalModule} from 'ngx-bootstrap/modal';
 import { ComponentModule } from 'src/app/component/component.module';
 // Components
 import { PopupProductCategoryComponent } from './component/popup-product-category/popup-product-category.component';
+import { PopupUploadMediaComponent } from './component/popup-upload-media/popup-upload-media.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { PopupProductCategoryComponent } from './component/popup-product-categor
   ],
   declarations: [
     AddProductComponent,
-    PopupProductCategoryComponent
+    PopupProductCategoryComponent,
+    PopupUploadMediaComponent
   ]
 })
 export class AddProductModule { }

@@ -95,3 +95,10 @@
   fill: none!important;
 }
 
+i.icon {
+    svg {
+        width: 16px;
+        fill: currentColor;
+    }
+}
+

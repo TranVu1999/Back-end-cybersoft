@@ -1,0 +1,63 @@
+<div class="bg-white main-wrapper">
+  <div class="content">
+    <h3 class="mb-5">Đăng nhập</h3>
+    <form class="mb-3" [formGroup]="loginInfo" (ngSubmit)="handleLogin()">
+      <div class="mb-4 control control--lg">
+        <input
+          formControlName="loginName"
+          name="loginName"
+          class="w-100"
+          type="text"
+          placeholder="Nhập nội dung"
+        >
+      </div>
+      <div class="mb-4 control control--lg">
+        <input
+          formControlName="password"
+          name="password"
+          class="w-100"
+          type="password"
+          placeholder="Nhập nội dung"
+        >
+      </div>
+      <div class="form-group">
+        <button
+          class="w-100 btn btn--md btn-primary-alt text-uppercase"
+          type="submit"
+        >Đăng Nhập</button>
+      </div>
+    </form>
+
+    <div class="d-flex justify-content-between">
+      <a class="fs-sm text-secondary-alt" href="#">Quên mật khẩu</a>
+      <a class="fs-sm text-secondary-alt" href="#">Đăng nhập với SMS</a>
+    </div>
+
+    <div class="my-4 position-relative separate-line">
+      <span class="position-absolute px-3">Hoặc</span>
+    </div>
+
+    <div class="mb-5 d-flex social-login-button">
+      <button class="flex-fill btn btn-outline-light-alt btn-facebook">
+        <img src="https://cdn-icons-png.flaticon.com/128/4494/4494475.png" alt="">
+          Facebook
+        </button>
+      <button class="flex-fill btn btn-outline-light-alt">
+        <img src="https://cdn-icons-png.flaticon.com/512/4494/4494485.png" alt="">
+        Google
+      </button>
+      <button class="flex-fill btn btn-outline-light-alt">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="">
+        Apple
+      </button>
+    </div>
+
+    <p class="text-center">
+      Bạn mới biết đến Shopee?
+      <a
+        class="ml-2 text-primary-alt"
+        [routerLink]="['/sign-up']"
+      >Đăng ký</a>
+    </p>
+  </div>
+</div>

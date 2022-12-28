@@ -1,0 +1,30 @@
+@use 'color' as color;
+@use 'fontSize' as fs;
+
+.main-wrapper {
+  width: 400px;
+  padding: 25px 30px;
+  border-radius: 4px;
+
+  .separate-line {
+    height: 1px;
+    background-color: color.$color-28;
+    color: color.$color-28;
+
+    span {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+    }
+  }
+
+  .social-login-button {
+    button {
+      img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+}

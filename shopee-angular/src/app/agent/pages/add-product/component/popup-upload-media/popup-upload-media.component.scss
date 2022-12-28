@@ -2,6 +2,10 @@
 
 .main-wrapper {
 
+    .notification {
+        color: color.$color-13;
+    }
+
     .tab {
         &__selection {
             border-bottom: 1px solid color.$color-20;

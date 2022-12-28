@@ -5,7 +5,9 @@ import { CommonModule } from '@angular/common';
 import {CustomerModule} from './customer/customer.module';
 import { AgentModule } from './agent/agent.module';
 import { ComponentModule } from './component/component.module';
+import { AuthorizationModule } from './authorization/authorization.module';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 // components
 import { AppComponent } from './app.component';
 // Pipes
@@ -23,7 +25,9 @@ import { SafeHtmlPipe } from './pipe/safe-html.pipe';
     AppRoutingModule,
     CustomerModule,
     AgentModule,
-    ComponentModule
+    ComponentModule,
+    AuthorizationModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

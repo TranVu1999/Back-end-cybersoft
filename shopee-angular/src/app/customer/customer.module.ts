@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 // modules
 import { CustomerRoutingModule } from './customer-routing.module';
 import { AccountModule } from './pages/account/account.module';
-import { AuthorizationModule } from './pages/authorization/authorization.module';
 // components
 import { CustomerComponent } from './customer.component';
 import { HeaderComponent } from './layouts/header/header.component';
@@ -13,7 +12,6 @@ import { HeaderComponent } from './layouts/header/header.component';
 		CommonModule,
 		CustomerRoutingModule,
 		AccountModule,
-		AuthorizationModule
 	],
 	declarations: [
 		CustomerComponent,

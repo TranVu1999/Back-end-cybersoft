@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopupUploadMediaComponent implements OnInit {
 
+  currentTabIndex = 1;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  // Handle Events
+  handleChoseTab(indexTab: number): void {
+    if(indexTab !== this.currentTabIndex) {
+      this.currentTabIndex = indexTab
+    }
   }
 
 }

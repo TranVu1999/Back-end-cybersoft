@@ -1,14 +1,27 @@
 <div class="main-wrapper">
     <div class="tab">
         <div class="mb-3 px-3 d-flex tab__selection">
-            <div class="py-2 mx-3 cursor-pointer tab__selection__item selected">Upload</div>
-            <div class="py-2 mx-3 cursor-pointer tab__selection__item">Embed Link</div>
+            <div
+                class="py-2 mx-3 cursor-pointer tab__selection__item"
+                [ngClass] = "{'selected': currentTabIndex === 0}"
+                (click) = "handleChoseTab(0)"
+            >Upload</div>
+            <div
+                class="py-2 mx-3 cursor-pointer tab__selection__item"
+                [ngClass] = "{'selected': currentTabIndex === 1}"
+                (click) = "handleChoseTab(1)"
+            >Embed Link</div>
         </div>
 
         <div class="p-3 tab__content">
-            <div class="text-center">
+            <div *ngIf = "currentTabIndex === 0" class="text-center">
                 <button class="mb-2 w-100 btn btn-outline-light-alt">Upload File</button>
-                <span>The maximun per file is 5MB</span>
+                <span class="notification">The maximun per file is 5MB</span>
+            </div>
+            <div *ngIf = "currentTabIndex === 1" class="text-center">
+                <div class="mb-3 control control--lg"><input type="text" placeholder="Paste the image link ..." class="w-100"></div>
+                <button class="mb-2 w-50 btn btn-primary-alt">Embed Image</button>
+                <p class="mb-0 notification">Works with any image from the web</p>
             </div>
         </div>
 

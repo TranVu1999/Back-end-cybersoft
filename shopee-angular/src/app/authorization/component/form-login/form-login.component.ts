@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  Validators ,
+  FormBuilder
+} from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,19 +14,18 @@ import { Router } from '@angular/router';
 })
 export class FormLoginComponent implements OnInit {
 
-  loginInfo = new FormGroup({
-    loginName: new FormControl(
-      '',
-      
-    ),
-    password: new FormControl('')
-  });
+  loginInfo: any;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit() {
+    this.loginInfo = this.formBuilder.group({
+      loginName: ['', [Validators.required]],
+      password: ['', [Validators.required]]
+    })
   }
 
   // Handle Events

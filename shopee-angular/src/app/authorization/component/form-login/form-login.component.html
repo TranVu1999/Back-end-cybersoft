@@ -1,29 +1,62 @@
 <div class="bg-white main-wrapper">
   <div class="content">
     <h3 class="mb-5">Đăng nhập</h3>
-    <form class="mb-3" [formGroup]="loginInfo" (ngSubmit)="handleLogin()">
-      <div class="mb-4 control control--lg">
-        <input
-          formControlName="loginName"
-          name="loginName"
-          class="w-100"
-          type="text"
-          placeholder="Nhập nội dung"
+    <form class="mb-3" [formGroup]="loginInfo" (ngSubmit)="handleLogin()" novalidate>
+      <div class="mb-2 form-row">
+        <div
+          class="control control--lg"
+          [ngClass]="{
+            'control--invalid': !loginInfo.controls.loginName?.valid && (loginInfo.controls.loginName?.dirty
+            ||loginInfo.controls.loginName?.touched)
+          }"
         >
-      </div>
-      <div class="mb-4 control control--lg">
-        <input
-          formControlName="password"
-          name="password"
-          class="w-100"
-          type="password"
-          placeholder="Nhập nội dung"
+          <input
+            formControlName="loginName"
+            name="loginName"
+            class="w-100"
+            type="text"
+            placeholder="Nhập nội dung"
+          >
+        </div>
+        <div
+          *ngIf="!loginInfo.controls.loginName?.valid && (loginInfo.controls.loginName?.dirty
+          ||loginInfo.controls.loginName?.touched)"
+          class="error-message"
         >
+            Vui lòng điền vào mục này
+        </div>
       </div>
+
+      <div class="mb-2 form-row">
+        <div
+          class="control control--lg"
+          [ngClass]="{
+            'control--invalid': !loginInfo.controls.password?.valid && (loginInfo.controls.password?.dirty
+            ||loginInfo.controls.password?.touched)
+          }"
+        >
+          <input
+            formControlName="password"
+            name="password"
+            class="w-100"
+            type="password"
+            placeholder="Nhập nội dung"
+          >
+        </div>
+        <div
+          *ngIf="!loginInfo.controls.password?.valid && (loginInfo.controls.password?.dirty
+          ||loginInfo.controls.password?.touched)"
+          class="error-message"
+        >
+          Vui lòng điền vào mục này
+        </div>
+      </div>
+
       <div class="form-group">
         <button
           class="w-100 btn btn--md btn-primary-alt text-uppercase"
           type="submit"
+          [disabled]="!loginInfo.valid"
         >Đăng Nhập</button>
       </div>
     </form>

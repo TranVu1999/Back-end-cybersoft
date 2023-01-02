@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Back-end-cybersoft.iml" filepath="$PROJECT_DIR$/.idea/Back-end-cybersoft.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopee-api/shopee.iml" filepath="$PROJECT_DIR$/shopee-api/shopee.iml" />
+    </modules>
+  </component>
+</project>

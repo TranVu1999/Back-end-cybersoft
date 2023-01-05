@@ -16,4 +16,11 @@ public class AccountServiceImp implements AccountService{
         System.out.println(accountList.size());
         return accountList.size() > 0;
     }
+
+    @Override
+    public AccountEntity checkLogin(String email) {
+        List<AccountEntity> accountList = accountRepository.findByEmail(email);
+        return accountList.size() > 0 ? accountList.get(0) : null;
+
+    }
 }

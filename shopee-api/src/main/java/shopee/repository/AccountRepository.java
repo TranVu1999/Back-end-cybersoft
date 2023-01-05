@@ -10,4 +10,6 @@ import java.util.List;
 @Repository
 public interface AccountRepository extends JpaRepository<AccountEntity, Integer> {
     List<AccountEntity> findByEmailAndPassword(String email, String password);
+    List<AccountEntity> findByEmail(String email);
+
 }

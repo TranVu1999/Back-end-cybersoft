@@ -27,6 +27,17 @@ public class CategoryEntity {
     @Column(name = "alias")
     private String alias;
 
+    @Column(name = "avatar")
+    private String avatar;
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
     public int getCategoryId() {
         return categoryId;
     }

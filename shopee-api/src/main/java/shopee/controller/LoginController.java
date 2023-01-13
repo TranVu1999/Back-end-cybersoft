@@ -15,7 +15,6 @@ import shopee.payload.response.DataResponse;
 import shopee.payload.response.DataTokenResponse;
 import shopee.service.AccountService;
 
-
 @RestController
 @RequestMapping("/login")
 public class LoginController {
@@ -50,7 +49,7 @@ public class LoginController {
 
         DataResponse dataResponse = new DataResponse();
         dataResponse.setStatus(HttpStatus.OK.value());
-        dataResponse.setDescription("");
+        dataResponse.setMessage("login successfully");
         dataResponse.setData(dataTokenResponse);
         dataResponse.setSuccess(isSuccess);
 //        dataResponse.setSuccess(accountService.checkLogin(signInRequest.getEmail(), signInRequest.getPassword()));

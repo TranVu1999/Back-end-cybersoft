@@ -1,10 +1,10 @@
 package shopee.payload.response;
 
-public class DataResponse {
+public class GetAllCategoryResponse {
     private int status;
     private String message;
-    private Object data;
     private boolean isSuccess;
+    private Object data;
 
     public int getStatus() {
         return status;
@@ -22,19 +22,19 @@ public class DataResponse {
         this.message = message;
     }
 
-    public Object getData() {
-        return data;
-    }
-
-    public void setData(Object data) {
-        this.data = data;
-    }
-
     public boolean isSuccess() {
         return isSuccess;
     }
 
     public void setSuccess(boolean success) {
         isSuccess = success;
+    }
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
     }
 }

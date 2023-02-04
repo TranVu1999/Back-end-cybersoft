@@ -1,0 +1,307 @@
+<div class="main-wrapper">
+    <div class="d-flex main-body">
+        <!-- Start :: Blueprint Sidebar -->
+        <div class="p-3 blueprint-sidebar">
+            <!-- Start :: Footer Layout -->
+            <div class="mb-5 category">
+                <div class="mb-4 d-flex align-items-center justify-content-between title">
+                    <span>Footer Layout</span>
+                    <i class="cursor-pointer icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path d="M8,6.81066017 L11.9696699,10.7803301 C12.2625631,11.0732233 12.7374369,11.0732233 13.0303301,10.7803301 C13.3232233,10.4874369 13.3232233,10.0125631 13.0303301,9.71966991 L8.53033009,5.21966991 C8.23743687,4.9267767 7.76256313,4.9267767 7.46966991,5.21966991 L2.96966991,9.71966991 C2.6767767,10.0125631 2.6767767,10.4874369 2.96966991,10.7803301 C3.26256313,11.0732233 3.73743687,11.0732233 4.03033009,10.7803301 L8,6.81066017 Z"></path>
+                        </svg>
+                    </i>
+                </div>
+
+                <div class="d-flex">
+                    <div class="blueprint footer-row">
+                        <button class="mb-2 d-block blueprint__demo">
+                            <div class="thumbnail">
+                                <div class="thumbnail__content">
+
+                                </div>
+                            </div>
+                        </button>
+                        <p class="text-center blueprint__description">Theo hàng ngang</p>
+                    </div>
+
+                    <div class="blueprint footer-column">
+                        <button class="mb-2 d-block blueprint__demo">
+                            <div class="h-100 d-flex">
+                                <div class="flex-fill thumbnail">
+                                    <div class="thumbnail__content">
+                                    </div>
+                                </div>
+                                <div class="flex-fill thumbnail">
+                                    <div class="thumbnail__content">
+                                    </div>
+                                </div>
+                                <div class="flex-fill thumbnail">
+                                    <div class="thumbnail__content">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </button>
+                        <p class="text-center blueprint__description">Theo cột</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End :: Footer Layout -->
+
+            <!-- Start :: Footer item -->
+            <div class="category">
+                <div class="mb-4 d-flex align-items-center justify-content-between title">
+                    <span>Footer Item</span>
+                    <i class="cursor-pointer icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path d="M8,9.18933983 L4.03033009,5.21966991 C3.73743687,4.9267767 3.26256313,4.9267767 2.96966991,5.21966991 C2.6767767,5.51256313 2.6767767,5.98743687 2.96966991,6.28033009 L7.46966991,10.7803301 C7.76256313,11.0732233 8.23743687,11.0732233 8.53033009,10.7803301 L13.0303301,6.28033009 C13.3232233,5.98743687 13.3232233,5.51256313 13.0303301,5.21966991 C12.7374369,4.9267767 12.2625631,4.9267767 11.9696699,5.21966991 L8,9.18933983 Z"></path>
+                        </svg>
+                    </i>
+
+                </div>
+
+                <div class="d-flex">
+                    <!-- Start :: Paragraph -->
+                    <div class="blueprint">
+                        <button class="mb-2 d-block blueprint__demo">
+                            <div class="thumbnail thumbnail--text">
+                                <div class="px-2 thumbnail__content">
+                                    <div class="text-start title">Aa</div>
+                                    <div class="skeleton"></div>
+                                    <div class="w-50 skeleton"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <p class="text-center blueprint__description">Đoạn văn bản</p>
+                    </div>
+                    <!-- End :: Paragraph -->
+
+
+                    <!-- Start :: Image -->
+                    <div class="blueprint">
+                        <button class="mb-2 d-block blueprint__demo">
+                            <div class="thumbnail thumbnail--image">
+                                <div class="position-relative px-2 thumbnail__content">
+                                    <svg class="position-absolute icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M14.572 8.961a1 1 0 0 1 1.316.189l.07.093 5.43 8.205a1 1 0 0 1-.718 1.545l-.116.007H3.3a1 1 0 0 1-.888-1.46l.06-.1 3.158-4.66.096-.116a1 1 0 0 1 1.214-.17l.105.069 2.46 1.854.04.028a1 1 0 0 0 1.319-.172l.07-.093 3.363-4.947a1 1 0 0 1 .275-.272ZM6.415 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z"></path></svg>
+                                </div>
+                            </div>
+                        </button>
+                        <p class="text-center blueprint__description">Hình ảnh</p>
+                    </div>
+                    <!-- End :: Image -->
+                </div>
+            </div>
+            <!-- End :: Footer item -->
+        </div>
+        <!-- End :: Blueprint Sidebar -->
+
+        <!-- Start :: Blueprint Draft -->
+        <div class="blueprint-draft">
+            <div class="mb-4 blueprint-draft__row footer-column">
+                <div class="h-100 d-flex">
+                    <div class="flex-fill thumbnail">
+                        <div class="position-relative thumbnail__content">
+                            <button
+                                class="position-absolute btn-add-footer-item highlight"
+                                (click)="handleShowBlueprintInput()"
+                            ><svg class="m-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><path d="M 40 0 L 40 0 L 40 80 M 0 40 L 0 40 L 80 40"></path></svg></button>
+                        </div>
+                    </div>
+                    <div class="flex-fill thumbnail">
+                        <div class="thumbnail__content">
+                            <button class="w-100 ms-0 mb-2 d-block blueprint__demo">
+                                <div class="thumbnail thumbnail--text">
+                                    <div class="px-2 thumbnail__content">
+                                        <div class="text-start title">Aa</div>
+                                        <div class="mb-0 skeleton"></div>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="w-100 ms-0 mb-2 d-block blueprint__demo">
+                                <div class="thumbnail thumbnail--text">
+                                    <div class="px-2 thumbnail__content">
+                                        <div class="text-start title">Aa</div>
+                                        <div class="mb-0 skeleton"></div>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="w-100 ms-0 mb-2 d-block blueprint__demo">
+                                <div class="thumbnail thumbnail--image">
+                                    <div class="position-relative px-2 thumbnail__content">
+                                        <svg class="position-absolute icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M14.572 8.961a1 1 0 0 1 1.316.189l.07.093 5.43 8.205a1 1 0 0 1-.718 1.545l-.116.007H3.3a1 1 0 0 1-.888-1.46l.06-.1 3.158-4.66.096-.116a1 1 0 0 1 1.214-.17l.105.069 2.46 1.854.04.028a1 1 0 0 0 1.319-.172l.07-.093 3.363-4.947a1 1 0 0 1 .275-.272ZM6.415 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z"></path></svg>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex-fill thumbnail">
+                        <div class="thumbnail__content">
+                            <button class="w-100 mb-2 d-block blueprint__demo">
+                                <div class="thumbnail thumbnail--image">
+                                    <div class="position-relative px-2 thumbnail__content">
+                                        <svg class="position-absolute icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M14.572 8.961a1 1 0 0 1 1.316.189l.07.093 5.43 8.205a1 1 0 0 1-.718 1.545l-.116.007H3.3a1 1 0 0 1-.888-1.46l.06-.1 3.158-4.66.096-.116a1 1 0 0 1 1.214-.17l.105.069 2.46 1.854.04.028a1 1 0 0 0 1.319-.172l.07-.093 3.363-4.947a1 1 0 0 1 .275-.272ZM6.415 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z"></path></svg>
+                                    </div>
+                                </div>
+                            </button>
+
+                            <button class="w-100 ms-0 mb-2 d-block blueprint__demo">
+                                <div class="thumbnail thumbnail--image">
+                                    <div class="position-relative px-2 thumbnail__content">
+                                        <svg class="position-absolute icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M14.572 8.961a1 1 0 0 1 1.316.189l.07.093 5.43 8.205a1 1 0 0 1-.718 1.545l-.116.007H3.3a1 1 0 0 1-.888-1.46l.06-.1 3.158-4.66.096-.116a1 1 0 0 1 1.214-.17l.105.069 2.46 1.854.04.028a1 1 0 0 0 1.319-.172l.07-.093 3.363-4.947a1 1 0 0 1 .275-.272ZM6.415 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z"></path></svg>
+                                    </div>
+                                </div>
+                            </button>
+
+                            <button class="w-100 ms-0 mb-2 d-block blueprint__demo">
+                                <div class="thumbnail thumbnail--text">
+                                    <div class="px-2 thumbnail__content">
+                                        <div class="text-start title">Aa</div>
+                                        <div class="mb-0 skeleton"></div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4 blueprint-draft__row footer-row">
+                <button class="w-100 h-100 mb-2 d-block blueprint__demo">
+                    <div class="d-flex thumbnail__content">
+                        <button class="flex-fill ms-0 mb-2 d-block blueprint__demo">
+                            <div class="thumbnail thumbnail--text">
+                                <div class="px-2 thumbnail__content">
+                                    <div class="text-start title">Aa</div>
+                                    <div class="mb-0 skeleton"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <button class="flex-fill ms-0 mb-2 d-block blueprint__demo">
+                            <div class="thumbnail thumbnail--text">
+                                <div class="px-2 thumbnail__content">
+                                    <div class="text-start title">Aa</div>
+                                    <div class="mb-0 skeleton"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <button class="flex-fill ms-0 mb-2 d-block blueprint__demo">
+                            <div class="thumbnail thumbnail--text">
+                                <div class="px-2 thumbnail__content">
+                                    <div class="text-start title">Aa</div>
+                                    <div class="mb-0 skeleton"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <button class="flex-fill ms-0 mb-2 d-block blueprint__demo">
+                            <div class="thumbnail thumbnail--text">
+                                <div class="px-2 thumbnail__content">
+                                    <div class="text-start title">Aa</div>
+                                    <div class="mb-0 skeleton"></div>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </button>
+            </div>
+
+            <div class="blueprint-draft__row">
+                <button class="w-100 h-100 mb-2 d-block blueprint__demo">
+                    <div class="thumbnail">
+                        <div class="position-relative thumbnail__content">
+                            <button class="position-absolute btn-add-footer-item"><svg class="m-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><path d="M 40 0 L 40 0 L 40 80 M 0 40 L 0 40 L 80 40"></path></svg></button>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <!-- End :: Blueprint Draft -->
+
+        <!-- Start :: Blueprint Input -->
+        <div class="overflow-hidden position-relative blueprint-input">
+            <div
+                class="position-absolute w-100 animate__animated blueprint-input__form"
+                [ngClass]="{
+                    'animate__fadeInRight': isShowBlueprintInput
+                }"
+            >
+                <ng-container [ngTemplateOutlet]="blueprintInputImageTemplate"></ng-container>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 'animate__fadeOutRight': !isShowBlueprintInput -->
+
+<!-- Start :: BlueprintInput Text Template -->
+<ng-template #blueprintInputTextTemplate>
+    <div class="widget-content">
+        <div class="px-3 py-4 widget-title">
+            <h3 class="mb-3 d-flex align-items-center justify-content-between">
+                Văn bản
+                <button class="close-modal"><svg viewBox="0 0 1027 1024" xmlns="http://www.w3.org/2000/svg">
+                <path d="M617.180121 510.055437l386.995092-385.561778a72.689554 72.689554 0 0 0 0-103.198691 73.406212 73.406212 0 0 0-103.403451 0L513.77667 406.959125 126.781577 21.602107a73.406212 73.406212 0 0 0-103.40345 0 72.689554 72.689554 0 0 0 0 103.096312L410.373219 510.055437 23.787645 895.821973A72.689554 72.689554 0 1 0 126.781577 998.815905L513.77667 613.151748l386.995092 385.664157a73.099073 73.099073 0 0 0 103.301071 0 72.689554 72.689554 0 0 0 0-103.096311L617.180121 510.055437z"></path>
+              </svg></button>
+            </h3>
+            <p class="mb-0">Chia sẻ suy nghĩ và ý tưởng của bạn cho Người mua về hành trình thương hiệu của bạn, bằng cách sử dụng tiêu đề và đoạn văn bản.</p>
+        </div>
+
+        <div class="px-3 py-4 widget-content">
+            <form>
+                <div class="form-group">
+                    <label class="mb-2">Đoạn Văn</label>
+                    <textarea class="py-2 px-3 w-100 form-input" placeholder="Nhập đoạn mô tả của bạn ở đây và sắp xếp các đoạn văn bản của bạn"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="mb-2">Liên kết tới</label>
+                    <input class="py-2 px-3 w-100 form-input" placeholder="Nhập đường link"/>
+                </div>
+
+
+                <div class="text-end">
+                    <button class="btn-submit">Lưu</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</ng-template>
+<!-- End :: BlueprintInput Text Template -->
+
+<!-- Start :: BlueprintInput Image Template -->
+<ng-template #blueprintInputImageTemplate>
+    <div class="widget-content">
+        <div class="px-3 py-4 widget-title">
+            <h3 class="mb-3 d-flex align-items-center justify-content-between">
+                Hình ảnh
+                <button class="close-modal"><svg viewBox="0 0 1027 1024" xmlns="http://www.w3.org/2000/svg">
+                <path d="M617.180121 510.055437l386.995092-385.561778a72.689554 72.689554 0 0 0 0-103.198691 73.406212 73.406212 0 0 0-103.403451 0L513.77667 406.959125 126.781577 21.602107a73.406212 73.406212 0 0 0-103.40345 0 72.689554 72.689554 0 0 0 0 103.096312L410.373219 510.055437 23.787645 895.821973A72.689554 72.689554 0 1 0 126.781577 998.815905L513.77667 613.151748l386.995092 385.664157a73.099073 73.099073 0 0 0 103.301071 0 72.689554 72.689554 0 0 0 0-103.096311L617.180121 510.055437z"></path>
+              </svg></button>
+            </h3>
+            <p class="mb-0">Đăng tải hình ảnh sản phẩm hoặc hình ảnh chương trình khuyến mãi tại đây.</p>
+        </div>
+
+        <div class="px-3 py-4 widget-content">
+            <form>
+                <div class="form-group">
+                    <label class="mb-2">Đoạn Văn</label>
+                    <textarea class="py-2 px-3 w-100 form-input" placeholder="Nhập đoạn mô tả của bạn ở đây và sắp xếp các đoạn văn bản của bạn"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="mb-2">Liên kết tới</label>
+                    <input class="py-2 px-3 w-100 form-input" placeholder="Nhập đường link"/>
+                </div>
+
+
+                <div class="text-end">
+                    <button class="btn-submit">Lưu</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</ng-template>
+<!-- End :: BlueprintInput Image Template -->

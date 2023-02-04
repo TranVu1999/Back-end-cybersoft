@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 // modules
 import {CustomerModule} from './customer/customer.module';
@@ -12,12 +12,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 // Pipes
 import { SafeHtmlPipe } from './pipe/safe-html.pipe';
+import { PickElementPipe } from './pipe/pick-some-element.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     // Pipes
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    PickElementPipe
   ],
   imports: [
     BrowserModule,
@@ -27,9 +29,11 @@ import { SafeHtmlPipe } from './pipe/safe-html.pipe';
     AgentModule,
     ComponentModule,
     AuthorizationModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    Title
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

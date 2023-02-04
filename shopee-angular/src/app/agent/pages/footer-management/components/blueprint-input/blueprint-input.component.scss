@@ -1,0 +1,138 @@
+.blueprint-input__form {
+    top: 0;
+    left: 0;
+    min-height: 300px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    animation-duration: .5s;
+    animation-delay: .2s;
+}
+
+.widget-title {
+    border-bottom: 1px solid #e5e5e5;
+
+    h3 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .close-modal {
+        svg {
+            width: 12px;
+            fill: #666;
+        }
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 14px;
+        color: #666;
+    }
+}
+
+.widget-content {
+    .form-input {
+        border: 1px solid grey;
+        border-radius: 3px;
+    }
+
+    .btn-submit {
+        min-width: 64px;
+        height: 30px;
+        font-weight: bold;
+
+        color: #666468;
+        background-color: #ffc107;
+        border-color: #ffc107;
+        border-radius: 3px;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .form-group+* {
+        margin-top: 16px;
+    }
+}
+
+// Form Image
+.form-image {
+    font-size: 12px;
+
+    .form-input--image {
+        border: 1px dashed grey;
+        border-radius: 3px;
+
+        .button-control {
+            height: 200px;
+            overflow: hidden;
+
+            svg {
+                stroke-width: 6px;
+                stroke: #999;
+                width: 24px;
+                height: 24px;
+            }
+
+            &:hover {
+                .placeholder-image {
+                    display: none;
+                }
+
+                .input-url{
+                    display: block;
+                }
+            }
+        }
+
+        .placeholder-image {
+            display: block;
+        }
+
+        .input-url {
+            width: 300px;
+            display: none;
+
+            input {
+                border: 1px solid grey;
+                border-radius: 3px;
+            }
+        }
+    }
+
+}
+
+.image-tip {
+    padding-left: 6px;
+    font-size: 12px;
+    line-height: 18px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+
+        display: block;
+        width: 2px;
+        height: 2px;
+        background-color: #666;
+    }
+}
+
+.loader {
+    border: 3px solid #f3f3f3; /* Light grey */
+    border-top: 3px solid grey; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}

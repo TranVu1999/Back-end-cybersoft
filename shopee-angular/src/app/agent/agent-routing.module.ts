@@ -10,6 +10,10 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('./pages/add-product/add-product.module').then(m => m.AddProductModule)
+      },
+      {
+        path: 'footer-management',
+        loadChildren: () => import('./pages/footer-management/footer-management.module').then(m => m.FooterManagementModule)
       }
     ]
   }

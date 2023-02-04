@@ -1,0 +1,107 @@
+$color-hightlight-hover: #2673dd;
+
+.thumbnail {
+    height: 100%;
+    padding: 6px;
+    background-color: #eee;
+
+    &__content {
+        width: auto;
+        height: 100%;
+        border: 1px dashed #a9a9a9;
+    }
+}
+
+.thumbnail {
+    &--text {
+        .title {
+            color: #b7b7b7;
+            font-weight: bolder;
+        }
+
+        .skeleton {
+            margin-bottom: 6px;
+            height: 6px;
+            background-color: #fff;
+        }
+    }
+
+    &--image {
+        svg.icon {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(.8);
+            fill: #b7b7b7;;
+        }
+
+    }
+}
+
+button.btn-add-footer-item {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 10px;
+    border: 2px solid #999;
+    border-radius: 50%;
+
+    &:hover,
+    &.highlight {
+        border-color: $color-hightlight-hover;
+
+        svg {
+            stroke: $color-hightlight-hover;
+        }
+    }
+
+    svg {
+        stroke-width: 6px;
+        stroke: #999;
+        width: 24px;
+        height: 24px;
+    }
+}
+// Start :: Blueprint Draft
+.main-wrapper {
+    margin-right: 16px;
+    height: calc(100vh - 112px);
+    background-color: #f5f5f5;
+
+    &__row.footer-column {
+        &>.d-flex {
+            gap: 10px;
+            min-height: 250px;
+        }
+    }
+
+    .blueprint-draft__row {
+        padding: 20px 16px;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+        &:has(button.btn-add-content) {
+            // background-color: red;
+        }
+
+        .thumbnail {
+            padding: 10px 15px;
+
+            &--text {
+                .title {
+                    color: #b7b7b7;
+                    font-weight: bolder;
+                }
+
+                .skeleton {
+                    height: 24px;
+                }
+            }
+
+            &__content {
+                min-height: 60px;
+            }
+        }
+    }
+}
+// End :: Blueprint Draft

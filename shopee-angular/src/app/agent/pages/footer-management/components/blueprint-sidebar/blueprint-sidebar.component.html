@@ -1,0 +1,108 @@
+<div class="main-wrapper">
+  <!-- Start :: Footer Layout -->
+  <div class="mb-5 category">
+    <div class="mb-4 d-flex align-items-center justify-content-between title">
+        <span>Footer Layout</span>
+        <i class="cursor-pointer icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M8,6.81066017 L11.9696699,10.7803301 C12.2625631,11.0732233 12.7374369,11.0732233 13.0303301,10.7803301 C13.3232233,10.4874369 13.3232233,10.0125631 13.0303301,9.71966991 L8.53033009,5.21966991 C8.23743687,4.9267767 7.76256313,4.9267767 7.46966991,5.21966991 L2.96966991,9.71966991 C2.6767767,10.0125631 2.6767767,10.4874369 2.96966991,10.7803301 C3.26256313,11.0732233 3.73743687,11.0732233 4.03033009,10.7803301 L8,6.81066017 Z"></path>
+            </svg>
+        </i>
+    </div>
+
+    <div class="d-flex">
+        <div class="blueprint footer-row">
+            <button
+                class="mb-2 d-block blueprint__demo"
+                [ngClass]="{'focus': itemTypeFocused === 'FooterRow'}"
+                (click)="handleChooseFooterItem('FooterRow')"
+            >
+                <div class="thumbnail">
+                    <div class="thumbnail__content"></div>
+                </div>
+            </button>
+            <p class="text-center blueprint__description">Theo hàng ngang</p>
+        </div>
+
+        <div class="blueprint footer-column">
+            <button
+                class="mb-2 d-block blueprint__demo"
+                [ngClass]="{'focus': itemTypeFocused === 'FooterColumn'}"
+                (click)="handleChooseFooterItem('FooterColumn')"
+            >
+                <div class="h-100 d-flex">
+                    <div class="flex-fill thumbnail">
+                        <div class="thumbnail__content">
+                        </div>
+                    </div>
+                    <div class="flex-fill thumbnail">
+                        <div class="thumbnail__content">
+                        </div>
+                    </div>
+                    <div class="flex-fill thumbnail">
+                        <div class="thumbnail__content">
+                        </div>
+                    </div>
+                </div>
+
+            </button>
+            <p class="text-center blueprint__description">Theo cột</p>
+        </div>
+    </div>
+
+</div>
+<!-- End :: Footer Layout -->
+
+<!-- Start :: Footer item -->
+<div class="category">
+    <div class="mb-4 d-flex align-items-center justify-content-between title">
+        <span>Footer Item</span>
+        <i class="cursor-pointer icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M8,9.18933983 L4.03033009,5.21966991 C3.73743687,4.9267767 3.26256313,4.9267767 2.96966991,5.21966991 C2.6767767,5.51256313 2.6767767,5.98743687 2.96966991,6.28033009 L7.46966991,10.7803301 C7.76256313,11.0732233 8.23743687,11.0732233 8.53033009,10.7803301 L13.0303301,6.28033009 C13.3232233,5.98743687 13.3232233,5.51256313 13.0303301,5.21966991 C12.7374369,4.9267767 12.2625631,4.9267767 11.9696699,5.21966991 L8,9.18933983 Z"></path>
+            </svg>
+        </i>
+
+    </div>
+
+    <div class="d-flex">
+        <!-- Start :: Paragraph -->
+        <div class="blueprint">
+            <button
+                class="mb-2 d-block blueprint__demo"
+                [ngClass]="{'focus': itemTypeFocused === 'Paragraph'}"
+                (click)="handleChooseFooterItem('Paragraph')"
+            >
+                <div class="thumbnail thumbnail--text">
+                    <div class="px-2 thumbnail__content">
+                        <div class="text-start title">Aa</div>
+                        <div class="skeleton"></div>
+                        <div class="w-50 skeleton"></div>
+                    </div>
+                </div>
+            </button>
+            <p class="text-center blueprint__description">Đoạn văn bản</p>
+        </div>
+        <!-- End :: Paragraph -->
+
+
+        <!-- Start :: Image -->
+        <div class="blueprint">
+            <button
+                class="mb-2 d-block blueprint__demo"
+                [ngClass]="{'focus': itemTypeFocused === 'Image'}"
+                (click)="handleChooseFooterItem('Image')"
+            >
+                <div class="thumbnail thumbnail--image">
+                    <div class="position-relative px-2 thumbnail__content">
+                        <svg class="position-absolute icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M14.572 8.961a1 1 0 0 1 1.316.189l.07.093 5.43 8.205a1 1 0 0 1-.718 1.545l-.116.007H3.3a1 1 0 0 1-.888-1.46l.06-.1 3.158-4.66.096-.116a1 1 0 0 1 1.214-.17l.105.069 2.46 1.854.04.028a1 1 0 0 0 1.319-.172l.07-.093 3.363-4.947a1 1 0 0 1 .275-.272ZM6.415 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z"></path></svg>
+                    </div>
+                </div>
+            </button>
+            <p class="text-center blueprint__description">Hình ảnh</p>
+        </div>
+        <!-- End :: Image -->
+    </div>
+</div>
+<!-- End :: Footer item -->
+</div>

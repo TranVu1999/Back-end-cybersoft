@@ -1,0 +1,88 @@
+$color-hightlight-hover: #2673dd;
+
+.thumbnail {
+    height: 100%;
+    padding: 6px;
+    background-color: #eee;
+
+    &__content {
+        width: auto;
+        height: 100%;
+        border: 1px dashed #a9a9a9;
+    }
+}
+
+.thumbnail {
+    &--text {
+        .title {
+            color: #b7b7b7;
+            font-weight: bolder;
+        }
+
+        .skeleton {
+            margin-bottom: 6px;
+            height: 6px;
+            background-color: #fff;
+        }
+    }
+
+    &--image {
+        svg.icon {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(.8);
+            fill: #b7b7b7;;
+        }
+
+    }
+}
+
+// Start :: Blueprint Sidebar
+.main-wrapper {
+    .category {
+        .title {
+            font-size: 16px;
+        }
+    }
+
+    .blueprint {
+        &+.blueprint {
+            margin-left: 16px;
+        }
+
+        &__demo {
+            width: 120px;
+            height: 120px;
+            padding: 30px 0;
+            background-color: #fafafa;
+            border: 1px solid #fafafa;
+
+            &:hover,
+            &.focus {
+                border-color: $color-hightlight-hover;
+
+                .thumbnail {
+                    background-color: rgba(38, 115, 221, 0.12);
+
+                    &__content {
+                        border-color: $color-hightlight-hover;
+                    }
+
+                    .title {
+                        color: $color-hightlight-hover;
+                    }
+
+                    svg.icon {
+                        fill: $color-hightlight-hover;
+                    }
+                }
+            }
+        }
+
+        &__description {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+}
+// End :: Blueprint Sidebar

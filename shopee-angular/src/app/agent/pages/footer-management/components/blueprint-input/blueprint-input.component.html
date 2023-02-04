@@ -1,0 +1,126 @@
+<div class="main-wrapper">
+    <div
+        class="position-absolute w-100 animate__animated blueprint-input__form"
+        [ngClass]="{
+            'animate__fadeInRight': true
+        }"
+    >
+        <ng-container [ngTemplateOutlet]="blueprintInputImageTemplate"></ng-container>
+
+    </div>
+</div>
+
+<!-- Start :: BlueprintInput Text Template -->
+<ng-template #blueprintInputTextTemplate>
+    <div class="widget-content">
+        <div class="px-3 py-4 widget-title">
+            <h3 class="mb-3 d-flex align-items-center justify-content-between">
+                Văn bản
+                <button class="close-modal"><svg viewBox="0 0 1027 1024" xmlns="http://www.w3.org/2000/svg">
+                <path d="M617.180121 510.055437l386.995092-385.561778a72.689554 72.689554 0 0 0 0-103.198691 73.406212 73.406212 0 0 0-103.403451 0L513.77667 406.959125 126.781577 21.602107a73.406212 73.406212 0 0 0-103.40345 0 72.689554 72.689554 0 0 0 0 103.096312L410.373219 510.055437 23.787645 895.821973A72.689554 72.689554 0 1 0 126.781577 998.815905L513.77667 613.151748l386.995092 385.664157a73.099073 73.099073 0 0 0 103.301071 0 72.689554 72.689554 0 0 0 0-103.096311L617.180121 510.055437z"></path>
+              </svg></button>
+            </h3>
+            <p class="mb-0">Chia sẻ suy nghĩ và ý tưởng của bạn cho Người mua về hành trình thương hiệu của bạn, bằng cách sử dụng tiêu đề và đoạn văn bản.</p>
+        </div>
+
+        <div class="px-3 py-4 widget-content">
+            <form>
+                <div class="form-group">
+                    <label class="mb-2">Đoạn Văn</label>
+                    <textarea class="py-2 px-3 w-100 form-input" placeholder="Nhập đoạn mô tả của bạn ở đây và sắp xếp các đoạn văn bản của bạn"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="mb-2">Liên kết tới</label>
+                    <input class="py-2 px-3 w-100 form-input" placeholder="Nhập đường link"/>
+                </div>
+
+
+                <div class="text-end">
+                    <button class="btn-submit">Lưu</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</ng-template>
+<!-- End :: BlueprintInput Text Template -->
+
+<!-- Start :: BlueprintInput Image Template -->
+<ng-template #blueprintInputImageTemplate>
+    <div class="widget-content">
+        <div class="px-3 py-4 widget-title">
+            <h3 class="mb-3 d-flex align-items-center justify-content-between">
+                Hình ảnh
+                <button class="close-modal"><svg viewBox="0 0 1027 1024" xmlns="http://www.w3.org/2000/svg">
+                <path d="M617.180121 510.055437l386.995092-385.561778a72.689554 72.689554 0 0 0 0-103.198691 73.406212 73.406212 0 0 0-103.403451 0L513.77667 406.959125 126.781577 21.602107a73.406212 73.406212 0 0 0-103.40345 0 72.689554 72.689554 0 0 0 0 103.096312L410.373219 510.055437 23.787645 895.821973A72.689554 72.689554 0 1 0 126.781577 998.815905L513.77667 613.151748l386.995092 385.664157a73.099073 73.099073 0 0 0 103.301071 0 72.689554 72.689554 0 0 0 0-103.096311L617.180121 510.055437z"></path>
+              </svg></button>
+            </h3>
+            <p class="mb-0">Đăng tải hình ảnh sản phẩm hoặc hình ảnh chương trình khuyến mãi tại đây.</p>
+        </div>
+
+        <div class="px-3 py-4 widget-content">
+            <form class="form-image" [formGroup]="mForm">
+                <div class="form-group">
+                    <label class="mb-2">Tải hình ảnh</label>
+
+                    <div class="mb-3 image-tips">
+                        <span class="position-relative d-block image-tip">Chiều ngang: 1200px; Chiều dọc: 100 - 2200px</span>
+                        <span class="position-relative d-block image-tip">Tối đa 2.0 MB mỗi hình</span>
+                        <span class="position-relative d-block image-tip">Định dạng hình ảnh: JPG, JPEG, PNG, GIF</span>
+                    </div>
+
+                    <div class="form-input--image">
+                        <div class="d-flex flex-column align-items-center justify-content-center button-control">
+                            <div *ngIf="!isShowImageResult" class="text-center placeholder-image">
+                                <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" class="m-0"><path  d="M 40 0 L 40 0 L 40 80 M 0 40 L 0 40 L 80 40"></path></svg>
+                                <span class="d-block">Tải hình ảnh</span>
+                            </div>
+
+                            <div class="mb-3 input-url">
+                                <input
+                                    class="w-100 py-1 px-2 "
+                                    type="text"
+                                    placeholder="Nhập đường link hình ảnh tại đây"
+                                    name="imageUrl"
+                                    formControlName="imageUrl"
+                                    autocomplete="off"
+                                >
+                            </div>
+
+                            <div *ngIf="imageUrl?.dirty && isLoadingImage" class="text-center">
+                                <div class="d-inline-block loader"></div>
+                            </div>
+
+                            <div *ngIf="isUnreachableImage" class="text-center erro-message">
+                                <span class="text-danger">Không thể lấy được hình ảnh. Vui lòng thử lại!</span>
+                            </div>
+
+                            <div
+                                class="image-result"
+                                [ngClass]="{
+                                    'd-block': isShowImageResult,
+                                    'd-none': !isShowImageResult
+                                }"
+                            >
+                                <img
+                                    [src]="imageUrlTemplate"
+                                    alt="customer's image"
+                                    (load)="handleCanGetImage()"
+                                >
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="text-end">
+                    <button class="btn-submit">Lưu</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</ng-template>
+<!-- End :: BlueprintInput Image Template -->

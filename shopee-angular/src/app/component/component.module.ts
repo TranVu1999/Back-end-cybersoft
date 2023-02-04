@@ -8,24 +8,29 @@ import {SelectBaseComponent} from './form/select-base/select-base.component';
 import {SelectMultiComponent} from './form/select-multi/select-multi.component';
 import {SelectSingleComponent} from './form/select-single/select-single.component';
 import { SelectNormalComponent } from './form/select-normal/select-normal.component';
-
+import { DrapAndDropComponent } from './drap-and-drop/drap-and-drop.component';
+import { CustomFooterComponent } from './custom-footer/custom-footer.component';
 @NgModule({
     declarations: [
       ComponentComponent,
       SelectBaseComponent,
       SelectMultiComponent,
       SelectSingleComponent,
-      SelectNormalComponent
+      SelectNormalComponent,
+      DrapAndDropComponent,
+      CustomFooterComponent
     ],
     exports: [
       SelectBaseComponent,
       SelectMultiComponent,
       SelectSingleComponent,
-      SelectNormalComponent
+      SelectNormalComponent,
+      DrapAndDropComponent,
+      CustomFooterComponent
     ],
     imports: [
       CommonModule,
-      ComponentRoutingModule
+      ComponentRoutingModule,
     ],
 })
 export class ComponentModule { }

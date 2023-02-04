@@ -17,6 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'component',
+    title: 'Shopee | Thư viện',
     loadChildren: () => import('./component/component.module').then(m => m.ComponentModule)
   },
 ];

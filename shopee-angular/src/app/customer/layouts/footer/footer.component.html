@@ -1,0 +1,51 @@
+<footer class="container-fluid widget-footer">
+    <ng-container *ngFor="let item of footerData">
+        <div class="mb-3 footer-row">
+            <ng-container
+                [ngTemplateOutlet]="item.type === 'footer-row' ? footerRowTemplate : footerColumnTemplate"
+                [ngTemplateOutletContext]="{footRowData: item}"
+            ></ng-container>
+        </div>
+    </ng-container>
+</footer>
+
+<!-- Start :: Footer Row Template -->
+<ng-template #footerRowTemplate let-footRowData="footRowData">
+    <div class="d-flex justify-content-center flex-wrap">
+        <ng-container
+            *ngFor="let item of footRowData.items"
+            [ngTemplateOutlet]="item.itemType === 'linked' ? linkedTemplate : paragraphTemplate"
+            [ngTemplateOutletContext]="{value: item}"
+        ></ng-container>
+    </div>
+</ng-template>
+<!-- End :: Footer Row Template -->
+
+<!-- Start :: Footer Column Template -->
+<ng-template #footerColumnTemplate let-footRowData="footRowData">
+    <div class="row">
+        <ng-container *ngFor="let column of footRowData.columns">
+            <div class="" [ngStyle]="{'flex': column.ratio}">
+                <h3>{{column.columnName}}</h3>
+                <ul>
+                    <li *ngFor="let item of column.items" >
+                        <ng-container [ngTemplateOutlet]="item.itemType === 'linked' ? linkedTemplate : paragraphTemplate"
+                        [ngTemplateOutletContext]="{value: item}"></ng-container>
+                    </li>
+                </ul>
+            </div>
+        </ng-container>
+    </div>
+</ng-template>
+<!-- End :: Footer Column Template -->
+
+
+
+
+<ng-template #paragraphTemplate let-value="value">
+    <div class="col" [ngStyle]="value.customStyle">{{value.content}}</div>
+</ng-template>
+
+<ng-template #linkedTemplate let-value="value">
+    <a class="px-3 d-block linked" [href]="value.url" [ngStyle]="value.customStyle">{{value.content}}</a>
+</ng-template>

@@ -1,0 +1,27 @@
+.main-wrapper {
+    .main-body {
+        margin-left: 250px;
+        margin-top: 112px;
+        height: calc(100vh - 112px);
+    }
+}
+
+.blueprint-sidebar {
+    width: 288px;
+    margin-right: 16px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.blueprint-input {
+    margin-right: 16px;
+    width: 400px;
+    border-radius: 2px;
+}
+
+.blueprint-draft {
+    margin-right: 16px;
+    width: calc(100% - 700px);
+    height: calc(100vh - 112px);
+    background-color: #f5f5f5;
+}

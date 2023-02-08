@@ -40,7 +40,7 @@ export class AppComponent implements OnInit, AfterViewInit{
         'https://cdn.pixabay.com/photo/2019/05/23/13/40/bird-4223977_960_720.jpg',
         'https://cdn.pixabay.com/photo/2023/01/01/05/31/bride-7689627_960_720.jpg'
 
-        
+
     ];
 
     constructor() {
@@ -61,29 +61,19 @@ export class AppComponent implements OnInit, AfterViewInit{
             img.setAttribute('srcset', srcset);
         }
 
-        if('loading' in HTMLImageElement.prototype) {
-            console.log('title: ', 'support');
-            lazyImgs.forEach(img => {
-                const src = img.getAttribute('lazy-src');
-                const srcset = img.getAttribute('lazy-srcset');
-                img.setAttribute('src', src || '');
-                img.setAttribute('srcset', srcset || '');
+        if('IntersectionObserver' in window) {
+            let observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        load(entry.target);
+                    }
+                });
             });
-        } else {
-            if('IntersectionObserver' in window) {
-                let observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if(entry.isIntersecting) {
-                            load(entry.target);
-                        }
-                    });
-                });
 
-                lazyImgs.forEach(img => {
-                    observer.observe(img);
-                });
+            lazyImgs.forEach(img => {
+                observer.observe(img);
+            });
 
-            }
         }
 
     }

@@ -1,13 +1,20 @@
-<!-- <app-header *ngIf = 'isShowCustomerHeader'></app-header> -->
-<app-custom-footer></app-custom-footer>
+<app-header *ngIf = 'isShowCustomerHeader'></app-header>
+<!-- <button
+  style="padding: 5px 10px; border: 1px solid gray;"
+  (click)="handleToogleCustomFooter()"
+>Show Custom footer</button>
 
-<!-- <div
+<ng-container #container></ng-container>
+<button class="btn btn-sm btn-primary">Click here</button> -->
+<!-- <app-custom-footer *ngIf="isShowCustomerFooter"></app-custom-footer> -->
+
+<div
   class="customer-section"
   [ngClass] = "{'is-show-customer-header': isShowCustomerHeader}"
 >
     <router-outlet></router-outlet>
     <p>customer</p>
-</div> -->
+</div>
 
 
 

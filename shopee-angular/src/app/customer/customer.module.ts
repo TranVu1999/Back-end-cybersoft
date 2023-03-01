@@ -7,7 +7,6 @@ import { ComponentModule } from '../component/component.module';
 // components
 import { CustomerComponent } from './customer.component';
 import { HeaderComponent } from './layouts/header/header.component';
-import { FooterComponent } from './layouts/footer/footer.component';
 
 @NgModule({
 	imports: [
@@ -18,8 +17,7 @@ import { FooterComponent } from './layouts/footer/footer.component';
 	],
 	declarations: [
 		CustomerComponent,
-		HeaderComponent,
-		FooterComponent
+		HeaderComponent
 	]
 })
 export class CustomerModule { }

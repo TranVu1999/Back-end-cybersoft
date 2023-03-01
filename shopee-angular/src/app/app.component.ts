@@ -43,43 +43,55 @@ export class AppComponent implements OnInit, AfterViewInit{
 
     ];
 
+    // Lazy loader
+    // lazyModuleConfig: Loader = {
+    // loader: () => import('@common-component/what-app-button/what-app-button.module'),
+    // module: 'WhatAppButtonModule',
+    // };
+
     constructor() {
 
     }
 
     ngOnInit(): void {
-
+        setInterval(() => {
+            this.count++;
+        }, 1000)
     }
 
     ngAfterViewInit(): void {
-        const lazyImgs = document.querySelectorAll('.lazy-img');
+        // const lazyImgs = document.querySelectorAll('.lazy-img');
 
-        function load(img: any) {
-            const src = img.getAttribute('lazy-src');
-            const srcset = img.getAttribute('lazy-srcset');
-            img.setAttribute('src', src);
-            img.setAttribute('srcset', srcset);
-        }
+        // function load(img: any) {
+        //     const src = img.getAttribute('lazy-src');
+        //     const srcset = img.getAttribute('lazy-srcset');
+        //     img.setAttribute('src', src);
+        //     img.setAttribute('srcset', srcset);
+        // }
 
-        if('IntersectionObserver' in window) {
-            let observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting) {
-                        load(entry.target);
-                    }
-                });
-            });
+        // if('IntersectionObserver' in window) {
+        //     let observer = new IntersectionObserver((entries) => {
+        //         entries.forEach(entry => {
+        //             if(entry.isIntersecting) {
+        //                 load(entry.target);
+        //             }
+        //         });
+        //     });
 
-            lazyImgs.forEach(img => {
-                observer.observe(img);
-            });
+        //     lazyImgs.forEach(img => {
+        //         observer.observe(img);
+        //     });
 
-        }
+        // }
 
     }
 
     // Handle Events
     handleClickButton(): void {
         this.count++;
+    }
+
+    testPerformance(): void {
+        console.log('title: ', 'debugger');
     }
 }

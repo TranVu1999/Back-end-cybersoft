@@ -8,7 +8,7 @@ export class PickElementPipe implements PipeTransform {
 
     constructor() {}
 
-    transform(value: any, args?: any): any {
+    transform(value: any): any {
         console.log('title: ', 'debugger');
         return value;
     }

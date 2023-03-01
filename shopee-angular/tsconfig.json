@@ -2,14 +2,77 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    /**
+      Values:
+      +) undefined: (default) provide suggestions as warnings to editors
+      +) true: unreachable code is ignored
+      +) false: raises compilers errors about unreachable code
+    */
+    "allowUnreachableCode": false,
+
+    /*
+      true/false: default true, ensures that your files are parsed in the ECMAScript strict mode, and emit "use strict" for each source file
+    */
+    "alwaysStrict": true,
+
     "baseUrl": "./",
+
+    /*
+      TS applies stricter rules around how it handles properties on type or interface which have a ? prefix
+      For example:
+      colorThemeOverride? : "dark" | "light"
+
+      without this flag enable, there are three values which you can set to be: "dark", "light" and undefined.
+    */
+    "exactOptionalPropertyTypes": true,
+
+
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+
+
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
+
+    /*
+      Report errors for fallthrough cases in switch statments.
+    */
     "noFallthroughCasesInSwitch": true,
+    "noImplicitThis": true,
+
+    /*
+      report errors on unsued local variables
+    */
+    "noUnusedLocals": true,
+
+    /*
+      report errors on unsued parameters
+    */
+    "noUnusedParameters": true,
+
+    /*
+      this flag causes functions parameters to be checked more correctly
+    */
+    "strictFunctionTypes": true,
+
+    /*
+
+    */
+    "strictNullChecks": true,
+
+    /*
+      allow importing modules with a .json extension
+    */
+    "resolveJsonModule": false,
+
+    /*
+      The comments in TypeSrcript file is removed when is converted into JavaScript file
+    */
+    "removeComments": true,
+
+
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -21,7 +84,10 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@shared-models/*": ["src/app/model/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

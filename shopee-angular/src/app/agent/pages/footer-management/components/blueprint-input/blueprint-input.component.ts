@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder } from "@angular/forms";
-import { Observable, Subscription } from "rxjs";
+import { FormGroup, FormBuilder } from "@angular/forms";
 import { debounceTime } from "rxjs/operators";
 
 @Component({
@@ -21,7 +20,7 @@ export class BlueprintInputComponent implements OnInit {
             imageUrl: ['']
         });
 
-        this.mForm.get('imageUrl')?.valueChanges.subscribe(data => {
+        this.mForm.get('imageUrl')?.valueChanges.subscribe(() => {
             this.isLoadingImage = true;
         });
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // models
-import { SidebarMenuInterface, SidebarSubMenuInterface } from '../../models/sidebar-menu.interface';
+import { SidebarMenuInterface } from '../../models/sidebar-menu.interface';
 
 @Component({
   selector: 'app-sidebar',

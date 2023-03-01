@@ -1,7 +1,10 @@
 <!-- <router-outlet></router-outlet> -->
-<div class="p-5 container main-wrapper" [ngStyle]="{'min-height': '100vh'}">
+<div class="p-5 container-fluid main-wrapper" [ngStyle]="{'min-height': '100vh'}">
   <div class="row">
       <div class="col-6">
+        <div class="box">
+          <button (click)="openModal()">Open Modal</button>
+        </div>
           <div class="box">
               <h3 class="title">group select box</h3>
               <small>Single Selection</small>

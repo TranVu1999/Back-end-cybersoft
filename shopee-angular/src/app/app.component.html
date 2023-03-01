@@ -1,5 +1,6 @@
-<router-outlet></router-outlet>
-<div class="container">
+<router-outlet></router-outlet> 
+
+<!-- <div class="container">
     <div class="row">
         <ng-container *ngFor="let item of imgs">
             <div class="col-4 mb-3 thumbnail">
@@ -14,10 +15,10 @@
             </div>
         </ng-container>
     </div>
-</div>
+</div> -->
 
-<!-- <button class="px-3 fixed-button" (click)="handleClickButton()">
-    Click me!
-    <p>{{count}}</p>
-</button> -->
+<!-- Lazy loader -->
+<!-- <ng-container *ngIf="isSatSport" [appLazyLoader]="lazyModuleConfig"></ng-container> -->
+<!-- <button (click)="handleClickButton()">Click me</button> -->
+<!-- {{testPerformance()}} -->
 

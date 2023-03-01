@@ -1,16 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
+// Services
+import { DynamicModalService } from './modal/dynamic-modal/dynamic-modal.service';
 
 @Component({
-  selector: 'app-component',
-  templateUrl: './component.component.html',
-  styleUrls: ['./component.component.scss']
+    selector: 'app-component',
+    templateUrl: './component.component.html',
+    styleUrls: ['./component.component.scss']
 })
 export class ComponentComponent implements OnInit {
 
-  constructor() {
-  }
+    constructor(
+        private modalService: DynamicModalService,
+        private viewContainerRef: ViewContainerRef
+    ) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+
+    openModal() {
+        this.modalService.setRootViewContainerRef(this.viewContainerRef);
+        this.modalService.addDynamicComponent('modal title', 'modal text');
+    }
 
 }

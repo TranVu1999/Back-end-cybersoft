@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FilterObjectInterface, FilterObjectItemInterface } from '../../models/filter-object.interface';
+import { FilterObjectInterface} from '../../models/filter-object.interface';
 
 @Component({
   selector: 'app-filter',
